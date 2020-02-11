@@ -60,11 +60,17 @@
       global: 1.12.1
       versions:
         - 1.12.1
+    - plugin: elixir
+      url: https://github.com/asdf-vm/asdf-elixir.git
 
 - vscodefile:
     # vscodefile
     file: vscode/vscodefile
     insiders: false
+
+- brewfile:
+    # This accepts the same options as `brew bundle` command:
+    file: macos/Brewfile
 
 # Symlink files
 - link:

@@ -1,6 +1,6 @@
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-source ${BASEDIR}/.zsh_plugins.sh # Load zsh plugins
+source $HOME/.zsh_plugins.sh # Load zsh plugins
 
 source ${BASEDIR}/zsh/env.zsh
 

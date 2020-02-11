@@ -18,4 +18,5 @@ git submodule update --init --recursive .
     --plugin-dir ${VENDOR_DIR}/dotbot-asdf \
     --plugin-dir ${VENDOR_DIR}/dotbot-vscode \
     --plugin-dir ${VENDOR_DIR}/dotbot-rust \
+    --plugin-dir ${VENDOR_DIR}/dotbot-brewfile \
     -c "${CONFIG}" "${@}"

@@ -13,3 +13,6 @@
 [submodule "vendor/dotbot-rust"]
 	path = vendor/dotbot-rust
 	url = https://github.com/alexcormier/dotbot-rust
+[submodule "vendor/dotbot-brewfile"]
+	path = vendor/dotbot-brewfile
+	url = https://github.com/sobolevn/dotbot-brewfile.git

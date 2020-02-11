@@ -8,7 +8,7 @@ source ${BASEDIR}/zsh/env.zsh
 # history
 #######################################################################
 
-HISTFILE=~/.zsh_history
+HISTFILE=${BASEDIR}/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
 
@@ -18,8 +18,8 @@ SAVEHIST=1000
 
 bindkey -e
 
-if [ -f ~/.zshkeys ]; then
-    source ~/.zshkeys
+if [ -f ${BASEDIR}/.zshkeys ]; then
+    source ${BASEDIR}/.zshkeys
 fi
 
 

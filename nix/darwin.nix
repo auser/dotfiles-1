@@ -7,52 +7,52 @@
     [
       # tools
       pkgs.git
-      pkgs.idris
-      pkgs.gitAndTools.hub
+      # # pkgs.idris
+      # pkgs.gitAndTools.hub
       pkgs.neovim
       pkgs.vim
       pkgs.ffmpeg
-      pkgs.hyperfine
-      pkgs.cacert # TODO: doesn't this come default?
-      pkgs.postgresql
+      # # pkgs.hyperfine
+      # # pkgs.cacert # TODO: doesn't this come default?
+      # # pkgs.postgresql
       pkgs.antibody
       pkgs.gitAndTools.diff-so-fancy
-      pkgs.google-cloud-sdk
+      # # pkgs.google-cloud-sdk
       pkgs.direnv
       pkgs.wget
-      pkgs.exa
+      # # pkgs.exa
       pkgs.jq
-      pkgs.fzf
-      pkgs.httpie
-      # pkgs.hugo # TODO: update
-      pkgs.texlive.combined.scheme-full
-      pkgs.nix
-      pkgs.clojure
-      pkgs.go
-      pkgs.ripgrep
-      pkgs.mitmproxy
+      # # pkgs.fzf
+      # # pkgs.httpie
+      # # pkgs.hugo # TODO: update
+      # # pkgs.texlive.combined.scheme-full
+      # # pkgs.nix
+      # pkgs.clojure
+      # pkgs.go
+      # # pkgs.ripgrep
+      # pkgs.mitmproxy
       pkgs.tree
-      pkgs.kubectl
-      pkgs.cloc
+      # pkgs.kubectl
+      # pkgs.cloc
       # pkgs.minikube # TODO: update
       pkgs.cmake
       # pkgs.yarn
-      pkgs.screenfetch
+      # pkgs.screenfetch
 
       # ocaml
       #pkgs.ocamlPackages.merlin
-      pkgs.ocamlPackages.utop
+      # pkgs.ocamlPackages.utop
 
       # python
-      pkgs.python3
-      pkgs.python2Full
-      pkgs.python36Packages.pip
-      pkgs.python36Packages.autopep8
-      pkgs.python36Packages.black
+      # pkgs.python3
+      # pkgs.python2Full
+      # pkgs.python36Packages.pip
+      # pkgs.python36Packages.autopep8
+      # pkgs.python36Packages.black
 
       # haskell
-      pkgs.haskellPackages.Agda
-      pkgs.cabal-install
+      # pkgs.haskellPackages.Agda
+      # pkgs.cabal-install
 
       # TODO: fix build for darwin
       #pkgs.cachix

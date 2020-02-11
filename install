@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Bootstrap dotfiles configuration.
 
-set -e
+set -ex
 
 CONFIG=".install.conf.yaml"
 VENDOR_DIR="./vendor"

@@ -44,8 +44,9 @@
       # pkgs.ocamlPackages.utop
 
       # python
-      # pkgs.python3
-      # pkgs.python2Full
+      pkgs.python3
+      pkgs.python2Full
+      pkgs.openssl
       # pkgs.python36Packages.pip
       # pkgs.python36Packages.autopep8
       # pkgs.python36Packages.black

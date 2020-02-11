@@ -1,12 +1,33 @@
-source ~/.zsh_plugins.sh # Load zsh plugins
+BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-source ~/.dotfiles/zsh/env.zsh
+source ${BASEDIR}/.zsh_plugins.sh # Load zsh plugins
 
-source ~/.dotfiles/zsh/options.zsh
-source ~/.dotfiles/zsh/functions/functions.zsh
-source ~/.dotfiles/zsh/functions/fzf-functions.zsh
-source ~/.dotfiles/zsh/functions/git-functions.zsh
-source ~/.dotfiles/zsh/bindings.zsh
-source ~/.dotfiles/zsh/alias.zsh
+source ${BASEDIR}/zsh/env.zsh
+
+#######################################################################
+# history
+#######################################################################
+
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+SAVEHIST=1000
+
+#######################################################################
+# key bindings
+#######################################################################
+
+bindkey -e
+
+if [ -f ~/.zshkeys ]; then
+    source ~/.zshkeys
+fi
+
+
+source ${BASEDIR}/zsh/options.zsh
+source ${BASEDIR}/zsh/functions/functions.zsh
+source ${BASEDIR}/zsh/functions/fzf-functions.zsh
+source ${BASEDIR}/zsh/functions/git-functions.zsh
+source ${BASEDIR}/zsh/bindings.zsh
+source ${BASEDIR}/zsh/alias.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

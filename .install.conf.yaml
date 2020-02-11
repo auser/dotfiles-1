@@ -6,7 +6,7 @@
       force: true # Swap original file
 
 # TODO: ?
-- clean: ["~", "~/.config"]
+- clean: ["~"]
 
 # Run shell commands
 - shell:
@@ -23,6 +23,22 @@
 # TODO: Install rust
 # TODO: Install npm global tools
 #- npm install -g @fabiospampinato/bump
+- go:
+    - github.com/delicb/cliware
+
+- rust:
+    - stable:
+        - targets:
+            - x86_64-apple-darwin
+            - x86_64-unknown-linux-gnu
+        - components:
+            - rust-analysis
+            - rls
+            - rust-src
+- cargo:
+    - ripgrep
+
+# Install asdf
 - asdf:
     - plugin: python
       url: https://github.com/tuvistavie/asdf-python.git
@@ -31,9 +47,9 @@
         - 3.8.1
     - plugin: nodejs
       url: https://github.com/asdf-vm/asdf-nodejs.git
-      global: 12.10
+      global: 12.15.0
       versions:
-        - 12.10
+        - 12.15.0
     - plugin: ruby
       url: https://github.com/asdf-vm/asdf-ruby.git
       global: 2.6.4
@@ -46,12 +62,24 @@
         - 1.12.1
 
 - vscodefile:
+    # vscodefile
     file: vscode/vscodefile
+    insiders: false
 
 # Symlink files
 - link:
     # Zsh
-    ~/.zshrc: zsh/zshrc.zsh
+    ~/.zshrc:
+      force: true
+      path: zsh/zshrc.zsh
+    ~/.zshrc.d:
+      create: true
+      path: zsh/
+    ~/.zlogin: zsh/zlogin
+    ~/.zshenv: zsh/zshenv
+    ~/.zshkeys: zsh/zshkeys
+
+    ~/.zshrc: zsh/zshrc
     ~/.zprofile: zsh/zprofile.zsh
     # Git
     ~/.gitconfig: git/gitconfig

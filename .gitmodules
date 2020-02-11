@@ -10,3 +10,6 @@
 [submodule "vendor/dotbot-asdf"]
 	path = vendor/dotbot-asdf
 	url = https://github.com/sobolevn/dotbot-asdf.git
+[submodule "vendor/dotbot-rust"]
+	path = vendor/dotbot-rust
+	url = https://github.com/alexcormier/dotbot-rust

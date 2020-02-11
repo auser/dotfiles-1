@@ -15,14 +15,17 @@
 
 # TODO: add specific shell block to install tools (not sure how)
 #- shell:
-    # TODO: delete! probably dont need it
-    #- npm config set prefix '~/.npm-global'
-    # TODO: Automate filling in the list
-    # TODO: Install go tools
-    #- go get -u github.com/m3ng9i/ran
-    # TODO: Install rust
-    # TODO: Install npm global tools
-    #- npm install -g @fabiospampinato/bump
+# TODO: delete! probably dont need it
+#- npm config set prefix '~/.npm-global'
+# TODO: Automate filling in the list
+# TODO: Install go tools
+#- go get -u github.com/m3ng9i/ran
+# TODO: Install rust
+# TODO: Install npm global tools
+#- npm install -g @fabiospampinato/bump
+
+- vscodefile:
+    file: vscode/vscodefile
 
 # Symlink files
 - link:
@@ -32,10 +35,12 @@
     # Git
     ~/.gitconfig: git/gitconfig
     ~/.gitignore_global: git/gitignore_global
+    # antibody
+    ~/.antibody: config/antibody.txt
     # Hammerspoon
     ~/.hammerspoon: hammerspoon
-    # Sublime Text
-    "~/Library/Application Support/Sublime Text 3/Packages/User": sublime
+    # hyper.js
+    ~/.hyper.js: config/hyper.js
     # Neovim
     ~/.config/nvim: nvim
     # VS Code

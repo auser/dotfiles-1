@@ -4,12 +4,15 @@
 set -e
 
 CONFIG=".install.conf.yaml"
-DOTBOT_DIR="dotbot"
 
-DOTBOT_BIN="bin/dotbot"
+DOTBOT_BIN="vendor/dotbot"
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 cd "${BASEDIR}"
-git submodule update --init --recursive "${DOTBOT_DIR}"
+git submodule update --init --recursive "${BASEDIR}"
 
-"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
+"${BASEDIR}/${DOTBOT_BIN}" -d "${BASEDIR}" \
+    --plugin-dir ${BASEDIR}vendor/dotbot-golang \
+    --plugin-dir ${BASEDIR}vendor/dotbot-asdf \
+    --plugin-dir ${BASEDIR}vendor/dotbot-vscode \
+    -c "${CONFIG}" "${@}"

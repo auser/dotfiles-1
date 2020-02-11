@@ -1,3 +1,12 @@
 [submodule "vendor/dotbot"]
 	path = vendor/dotbot
 	url = https://github.com/anishathalye/dotbot
+[submodule "vendor/dotbot-golang"]
+	path = vendor/dotbot-golang
+	url = https://github.com/delicb/dotbot-golang
+[submodule "vendor/dotbot-vscode"]
+	path = vendor/dotbot-vscode
+	url = https://github.com/hujianxin/dotbot-vscode.git
+[submodule "vendor/dotbot-asdf"]
+	path = vendor/dotbot-asdf
+	url = https://github.com/sobolevn/dotbot-asdf.git

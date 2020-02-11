@@ -15,7 +15,7 @@ export PATH=$PATH:./node_modules/.bin
 # TODO: remove? ask on nix irc or nix darwin
 . ~/.nix-profile/etc/profile.d/hm-session-vars.sh
 
-eval "$(hub alias -s)"
+# eval "$(hub alias -s)"
 
 # TODO: change my pure prompt if I am in direnv env
 # look at the existing prompt and use below function as it returns needed info

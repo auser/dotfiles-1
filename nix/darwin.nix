@@ -47,6 +47,7 @@
       pkgs.python3
       pkgs.python2Full
       pkgs.openssl
+      pkgs.python38Full
       # pkgs.python36Packages.pip
       # pkgs.python36Packages.autopep8
       # pkgs.python36Packages.black

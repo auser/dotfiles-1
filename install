@@ -13,6 +13,17 @@ BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "${BASEDIR}"
 git submodule update --init --recursive .
 
+if [ ! -f ${BASEDIR}/hammerspoon/Spoons/Lunette.spoon ]; then
+    (
+        cd ${BASEDIR}/hammerspoon/Spoons/Lunette/Spoons/
+        /bin/echo "A" | unzip -qq Lunette.spoon.zip -d ${BASEDIR}/hammerspoon/Spoons/Lunette.spoon
+    )
+    # ln -sf ${BASEDIR}/hammerspoon/Spoons/Lunette/Spoons/Lunette.spoon ${BASEDIR}/hammerspoon/Spoons/Lunette.spoon
+fi
+if [ ! -f ${BASEDIR}/hammerspoon/Spoons/miro-windows-manager/MiroWindowsManager.spoon ]; then
+    ln -sf ${BASEDIR}/hammerspoon/Spoons/miro-windows-manager/MiroWindowsManager.spoon ${BASEDIR}/hammerspoon/Spoons/MiroWindowsManager.spoon
+fi
+
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" \
     --plugin-dir ${VENDOR_DIR}/dotbot-golang \
     --plugin-dir ${VENDOR_DIR}/dotbot-asdf \

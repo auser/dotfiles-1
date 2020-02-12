@@ -20,6 +20,7 @@ for path_candidate in /opt/local/sbin \
   /usr/local/bin/ \
   $HOME/.dotfiles/bin \
   $HOME/bin \
+  $HOME/.bin \
   $HOME/src/gocode/bin \
   /Applications/Postgres.app/Contents/Versions/9.4/bin
 do

@@ -62,6 +62,9 @@
         - 1.12.1
     - plugin: elixir
       url: https://github.com/asdf-vm/asdf-elixir.git
+      global: 1.10.1
+      versions:
+        - 1.10.1
 
 - vscodefile:
     # vscodefile
@@ -78,6 +81,7 @@
     ~/.bin:
       create: true
       path: ~/.bin
+    ~/.bin/airport: /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport
     # Zsh
     ~/.zshrc:
       force: true

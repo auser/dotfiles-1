@@ -16,3 +16,9 @@
 [submodule "vendor/dotbot-brewfile"]
 	path = vendor/dotbot-brewfile
 	url = https://github.com/sobolevn/dotbot-brewfile.git
+[submodule "hammerspoon/Spoons/miro-windows-manager"]
+	path = hammerspoon/Spoons/miro-windows-manager
+	url = https://github.com/miromannino/miro-windows-manager.git
+[submodule "hammerspoon/Spoons/Lunette"]
+	path = hammerspoon/Spoons/Lunette
+	url = https://github.com/scottwhudson/Lunette.git

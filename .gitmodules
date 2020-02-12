@@ -19,6 +19,9 @@
 [submodule "hammerspoon/Spoons/miro-windows-manager"]
 	path = hammerspoon/Spoons/miro-windows-manager
 	url = https://github.com/miromannino/miro-windows-manager.git
+	ignore = dirty
 [submodule "hammerspoon/Spoons/Lunette"]
 	path = hammerspoon/Spoons/Lunette
 	url = https://github.com/scottwhudson/Lunette.git
+	ignore = dirty
+

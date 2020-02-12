@@ -42,11 +42,12 @@
       # ocaml
       #pkgs.ocamlPackages.merlin
       # pkgs.ocamlPackages.utop
+      # OpenSSL
+      # pkgs.openssl
 
       # python
-      pkgs.python3
+      # pkgs.python3
       pkgs.python2Full
-      pkgs.openssl
       pkgs.python38Full
       # pkgs.python36Packages.pip
       # pkgs.python36Packages.autopep8
@@ -68,7 +69,7 @@
 
 
   # TODO: remove & test more
-  #nixpkgs.overlays = [(import ../../src/clones/overlay-example/overlay.nix)];
+  # nixpkgs.overlays = [(import ../../src/clones/overlay-example/overlay.nix)];
 
   # Auto upgrade nix package and the daemon service.
   services.nix-daemon.enable = true;

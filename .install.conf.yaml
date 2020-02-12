@@ -74,6 +74,10 @@
 
 # Symlink files
 - link:
+    # bin
+    ~/.bin:
+      create: true
+      path: ~/.bin
     # Zsh
     ~/.zshrc:
       force: true

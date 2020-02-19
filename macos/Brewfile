@@ -41,6 +41,7 @@ brew "wget"
 brew "wrk"
 brew "yamllint"
 brew "yarn"
+brew "tmux"
 
 # Homebrew Casks
 cask "arq"

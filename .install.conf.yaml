@@ -42,9 +42,9 @@
 - asdf:
     - plugin: python
       url: https://github.com/tuvistavie/asdf-python.git
-      global: 3.8.1
+      global: anaconda3-5.3.1
       versions:
-        - 3.8.1
+        - anaconda3-5.3.1
     - plugin: nodejs
       url: https://github.com/asdf-vm/asdf-nodejs.git
       global: 12.15.0
@@ -92,6 +92,8 @@
     ~/.zlogin: zsh/zlogin
     ~/.zshenv: zsh/zshenv
     ~/.zshkeys: zsh/zshkeys
+    ~/.tmux.conf: tmux/tmux.conf
+    ~/.tmux.conf.local: tmux/tmux.conf.local
 
     ~/.zshrc: zsh/zshrc
     ~/.zprofile: zsh/zprofile.zsh

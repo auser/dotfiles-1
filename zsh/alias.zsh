@@ -302,3 +302,5 @@ alias gdn='git diff --name-only'
 alias gs='git status --short'
 alias gss='git show --word-diff=color' # See changes made
 
+# Emacs
+alias emacs="open /Applications/Emacs.app $1"

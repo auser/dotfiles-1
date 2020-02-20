@@ -94,6 +94,10 @@
     ~/.zshkeys: zsh/zshkeys
     ~/.tmux.conf: tmux/tmux.conf
     ~/.tmux.conf.local: tmux/tmux.conf.local
+    ~/.fonts:
+      create: true
+      path: local/fonts/SourceCodePro
+    ~/.emacs.d: emacs
 
     ~/.zshrc: zsh/zshrc
     ~/.zprofile: zsh/zprofile.zsh

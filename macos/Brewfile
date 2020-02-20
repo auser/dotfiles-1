@@ -7,6 +7,8 @@ tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
+tap "d12frosted/emacs-plus"
+tap "caskroom/fonts"
 
 # Homebrew
 brew "antibody"
@@ -17,7 +19,7 @@ brew "argocd"
 brew "black"
 brew "docker-machine-driver-vmware"
 brew "docker-machine"
-brew "fish"
+brew "emacs-plus"
 brew "git"
 brew "go"
 brew "grc"
@@ -76,16 +78,20 @@ cask "slack"
 cask "spotify"
 cask "transmit"
 cask "visual-studio-code"
+cask "emacs-plus"
+cask "font-fontawesome"
+cask "font-hack-nerd-font"
+cask "font-sourcecodepro-nerd-font"
 
 # macOS App Store
 #mas "1Blocker", id: 1107421413
 # mas "1Password 7", id: 1333542190
-mas "Affinity Designer", id: 824171161
-mas "Affinity Photo", id: 824183456
+# mas "Affinity Designer", id: 824171161
+# mas "Affinity Photo", id: 824183456
 # mas "Amphetamine", id: 937984704
 #mas "Irvue", id: 1039633667
 #mas "Jira", id: 1475897096
 #mas "Microsoft Remote Desktop", id: 1295203466
 # mas "Parcel", id: 639968404
-mas "Reeder", id: 880001334
-mas "Things", id: 904280696
+# mas "Reeder", id: 880001334
+# mas "Things", id: 904280696

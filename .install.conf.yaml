@@ -36,7 +36,9 @@
             - rls
             - rust-src
 - cargo:
-    - ripgrep
+    - cargo-watch
+    - racer:
+      - +nightly
 
 # Install asdf
 - asdf:
@@ -71,9 +73,9 @@
     file: vscode/vscodefile
     insiders: false
 
-- brewfile:
-    # This accepts the same options as `brew bundle` command:
-    file: macos/Brewfile
+# - brewfile:
+#     # This accepts the same options as `brew bundle` command:
+#     file: macos/Brewfile
 
 # Symlink files
 - link:
@@ -97,7 +99,8 @@
     ~/.fonts:
       create: true
       path: local/fonts/SourceCodePro
-    ~/.emacs.d: emacs
+    ~/.emacs.d: emacs/spacemacs
+    ~/.spacemacs: emacs/spacemacs.conf
 
     ~/.zshrc: zsh/zshrc
     ~/.zprofile: zsh/zprofile.zsh

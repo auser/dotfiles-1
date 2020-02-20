@@ -24,7 +24,7 @@
 	path = hammerspoon/Spoons/Lunette
 	url = https://github.com/scottwhudson/Lunette.git
 	ignore = dirty
-
 [submodule "emacs"]
 	path = emacs
 	url = https://github.com/syl20bnr/spacemacs
+	ignore = dirty

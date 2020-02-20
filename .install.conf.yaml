@@ -73,16 +73,16 @@
     file: vscode/vscodefile
     insiders: false
 
-# - brewfile:
-#     # This accepts the same options as `brew bundle` command:
-#     file: macos/Brewfile
+- brewfile:
+    # This accepts the same options as `brew bundle` command:
+    file: macos/Brewfile
 
 # Symlink files
 - link:
     # bin
     ~/.bin:
       create: true
-      path: ~/.bin
+      path: bin
     ~/.bin/airport: /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport
     # Zsh
     ~/.zshrc:
@@ -103,7 +103,7 @@
       path: emacs/spacemacs
     ~/.spacemacs: emacs/spacemacs.conf
 
-    ~/.zshrc: zsh/zshrc
+    ~/.zshrc: zsh/zshrc.zsh
     ~/.zprofile: zsh/zprofile.zsh
     # Git
     ~/.gitconfig: git/gitconfig

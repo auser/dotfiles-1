@@ -99,7 +99,8 @@
     ~/.fonts:
       create: true
       path: local/fonts/SourceCodePro
-    ~/.emacs.d: emacs/spacemacs
+    ~/.emacs.d:
+      path: emacs/spacemacs
     ~/.spacemacs: emacs/spacemacs.conf
 
     ~/.zshrc: zsh/zshrc

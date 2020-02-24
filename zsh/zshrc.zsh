@@ -1,4 +1,4 @@
-BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+BASEDIR=$HOME/.dotfiles
 
 source $HOME/.zsh_plugins.sh # Load zsh plugins
 
@@ -29,5 +29,9 @@ source ${BASEDIR}/zsh/functions/fzf-functions.zsh
 source ${BASEDIR}/zsh/functions/git-functions.zsh
 source ${BASEDIR}/zsh/bindings.zsh
 source ${BASEDIR}/zsh/alias.zsh
+
+for file in ${BASEDIR}/zsh/features/*.zsh; do
+        source $file;
+done
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

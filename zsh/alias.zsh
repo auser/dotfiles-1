@@ -303,4 +303,4 @@ alias gs='git status --short'
 alias gss='git show --word-diff=color' # See changes made
 
 # Emacs
-alias emacs="open /Applications/Emacs.app $1"
+alias emacs="open /Applications/Emacs.app $@"

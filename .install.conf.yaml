@@ -91,6 +91,7 @@
     ~/.zshrc.d:
       create: true
       path: zsh/
+    ~/.asdf: asdf
     ~/.zlogin: zsh/zlogin
     ~/.zshenv: zsh/zshenv
     ~/.zshkeys: zsh/zshkeys

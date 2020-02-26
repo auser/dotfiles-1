@@ -35,3 +35,5 @@ for file in ${BASEDIR}/zsh/features/*.zsh; do
 done
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+

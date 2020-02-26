@@ -3,6 +3,7 @@
   "workbench.colorCustomizations": {
     "editor.lineHighlightBackground": "#212121"
   },
+
   // breadcrumbs
   "breadcrumbs.enabled": true,
   // editor

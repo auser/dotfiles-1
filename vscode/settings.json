@@ -169,6 +169,7 @@
   },
   "go.lintTool": "golint",
   "go.lintOnSave": "package",
+  "go.goroot": "~/go",
   // files
   "files.associations": {
     "*.toml": "toml"

@@ -66,7 +66,7 @@ cask "font-sourcecodepro-nerd-font"
 # macOS App Store
 #mas "1Blocker", id: 1107421413
 mas "1Password 7", id: 1333542190
-mas "XCode", id: 497799835
+# mas "XCode", id: 497799835
 # mas " Affinity Designer", id: 824171161
 # mas "Affinity Photo", id: 824183456
 # mas "Amphetamine", id: 937984704

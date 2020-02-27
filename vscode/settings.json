@@ -217,5 +217,8 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "[jinja]": {
+        "editor.autoIndent": "advanced"
+    }
 }

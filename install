@@ -15,9 +15,8 @@ git submodule update --init --recursive .
 
 if [ ! -f ${BASEDIR}/hammerspoon/Spoons/Lunette.spoon ]; then
     if [ ! -d ${BASEDIR}/hammerspoon/Spoons/Lunette/Lunette.spoon ]; then
-        /bin/echo "a" | unzip -qq ${BASEDIR}/hammerspoon/Spoons/Lunette/Spoons/Lunette.spoon.zip -d ${BASEDIR}/hammerspoon/Spoons
+        /bin/echo "A" | unzip -qq ${BASEDIR}/hammerspoon/Spoons/Lunette/Spoons/Lunette.spoon.zip -d ${BASEDIR}/hammerspoon/Spoons
     fi
-    ln -sf ${BASEDIR}/hammerspoon/Spoons/Lunette/Lunette.spoon ${BASEDIR}/hammerspoon/Spoons/Lunette.spoon
 fi
 
 if [ ! -f ${BASEDIR}/hammerspoon/Spoons/miro-windows-manager/MiroWindowsManager.spoon ]; then
@@ -30,4 +29,5 @@ fi
     --plugin-dir ${VENDOR_DIR}/dotbot-asdf \
     --plugin-dir ${VENDOR_DIR}/dotbot-vscode \
     --plugin-dir ${VENDOR_DIR}/dotbot-brewfile \
+    --plugin-dir ${VENDOR_DIR}/dotbot-rust \
     -c "${CONFIG}" --verbose "${@}"

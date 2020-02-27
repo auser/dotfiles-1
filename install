@@ -14,20 +14,20 @@ cd "${BASEDIR}"
 git submodule update --init --recursive .
 
 if [ ! -f ${BASEDIR}/hammerspoon/Spoons/Lunette.spoon ]; then
-    (
-        cd ${BASEDIR}/hammerspoon/Spoons/Lunette/Spoons/
-        /bin/echo "A" | unzip -qq Lunette.spoon.zip -d ${BASEDIR}/hammerspoon/Spoons/Lunette.spoon
-    )
-    # ln -sf ${BASEDIR}/hammerspoon/Spoons/Lunette/Spoons/Lunette.spoon ${BASEDIR}/hammerspoon/Spoons/Lunette.spoon
+    if [ ! -d ${BASEDIR}/hammerspoon/Spoons/Lunette/Lunette.spoon ]; then
+        /bin/echo "a" | unzip -qq ${BASEDIR}/hammerspoon/Spoons/Lunette/Spoons/Lunette.spoon.zip -d ${BASEDIR}/hammerspoon/Spoons
+    fi
+    ln -sf ${BASEDIR}/hammerspoon/Spoons/Lunette/Lunette.spoon ${BASEDIR}/hammerspoon/Spoons/Lunette.spoon
 fi
+
 if [ ! -f ${BASEDIR}/hammerspoon/Spoons/miro-windows-manager/MiroWindowsManager.spoon ]; then
     ln -sf ${BASEDIR}/hammerspoon/Spoons/miro-windows-manager/MiroWindowsManager.spoon ${BASEDIR}/hammerspoon/Spoons/MiroWindowsManager.spoon
 fi
 
+# --plugin-dir ${VENDOR_DIR}/dotbot-rust \
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" \
     --plugin-dir ${VENDOR_DIR}/dotbot-golang \
     --plugin-dir ${VENDOR_DIR}/dotbot-asdf \
     --plugin-dir ${VENDOR_DIR}/dotbot-vscode \
-    --plugin-dir ${VENDOR_DIR}/dotbot-rust \
     --plugin-dir ${VENDOR_DIR}/dotbot-brewfile \
-    -c "${CONFIG}" "${@}"
+    -c "${CONFIG}" --verbose "${@}"

@@ -99,7 +99,7 @@
     ~/.tmux.conf.local: tmux/tmux.conf.local
     ~/.fonts:
       create: true
-      path: local/fonts/SourceCodePro
+      path: local/fonts/
     ~/.emacs.d:
       path: emacs/spacemacs
     ~/.spacemacs: emacs/spacemacs.conf

@@ -103,7 +103,7 @@
     ~/.emacs.d:
       path: emacs/spacemacs
     ~/.spacemacs: emacs/spacemacs.conf
-
+    ~/.config/starship.toml: config/starship.toml
     ~/.zshrc: zsh/zshrc.zsh
     ~/.zprofile: zsh/zprofile.zsh
     # Git

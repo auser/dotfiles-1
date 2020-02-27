@@ -1,4 +1,3 @@
-# autoload -Uz promptinit; promptinit
-# prompt powerlevel9k
+prompt powerlevel9k
 
 eval "$(starship init zsh)"

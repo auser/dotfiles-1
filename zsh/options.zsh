@@ -43,12 +43,12 @@ setopt auto_list # automatically list choices on ambiguous completion
 setopt auto_menu # automatically use menu completion
 setopt always_to_end # move cursor to end if word had one match
 
-if [[ "$TERM_PROGRAM" == "Apple_Terminal" ]]; then
-  function chpwd {
-    printf 'e]7;%sa' "file://$HOSTNAME${PWD// /%20}"
-  }
-  chpwd
-fi
+#Colored Prompt
+autoload -U promptinit
+promptinit
+
+#Colors
+autoload -U colors && colors
 
 #eval "$(git-hub alias -s)" # git -> hub. TODO: make it work with nix installed git-hub!
 eval "$(direnv hook zsh)" # Direnv

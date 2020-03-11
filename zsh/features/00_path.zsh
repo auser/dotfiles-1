@@ -2,7 +2,7 @@
 # path, the 0 in the filename causes this to load first
 
 # Base PATH
-PATH=/usr/local/bin:/usr/local/sbin:/sbin:/usr/sbin:/bin:/usr/bin:./node_modules/bin:./bin
+PATH=/usr/local/bin:/usr/local/sbin:/sbin:/usr/sbin:/bin:/usr/bin:./node_modules/bin:./node_modules/.bin:./bin
 
 
 # Conditional PATH additions

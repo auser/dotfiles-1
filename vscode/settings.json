@@ -37,7 +37,7 @@
   "workbench.editor.showIcons": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
   // window
-  "window.zoomLevel": -1,
+  "window.zoomLevel": -2,
   "window.restoreWindows": "all",
   "window.newWindowDimensions": "maximized",
   // debug

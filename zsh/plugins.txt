@@ -18,3 +18,4 @@ zdharma/fast-syntax-highlighting
 bhilburn/powerlevel9k
 # sindresorhus/pure
 denysdovhan/spaceship-prompt
+ohmyzsh/ohmyzsh path:themes/geoffgarside.zsh-theme

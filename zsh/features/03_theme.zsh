@@ -1,5 +1,6 @@
 # ZSH_THEME="powerlevel9k"
-ZSH_THEME="spaceship"
+# ZSH_THEME="spaceship"
+ZSH_THEME="geoffgarside"
 
 SPACESHIP_PROMPT_ORDER=(
   user          # Username section

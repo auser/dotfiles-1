@@ -4,14 +4,18 @@
     "editor.lineHighlightBackground": "#212121"
   },
 
+  "files.autoSave": "onFocusChange",
+
   // breadcrumbs
   "breadcrumbs.enabled": true,
   // editor
   "editor.renderLineHighlight": "line",
   "editor.gotoLocation.multiple": "goto",
+  "editor.semanticHighlighting.enabled": true,
   // "editor.codeActionsOnSave": {
   //   "source.organizeImports": true
   // },
+
   "editor.hideCursorInOverviewRuler": true,
   "editor.scrollBeyondLastLine": false,
   "editor.lineHeight": 26,
@@ -37,7 +41,7 @@
   "workbench.editor.showIcons": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
   // window
-  "window.zoomLevel": -2,
+  "window.zoomLevel": -1,
   "window.restoreWindows": "all",
   "window.newWindowDimensions": "maximized",
   // debug

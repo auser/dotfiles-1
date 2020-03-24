@@ -224,5 +224,8 @@
   },
   "[jinja]": {
         "editor.autoIndent": "advanced"
-    }
+    },
+    "aws.samcli.location": "/usr/local/bin/sam",
+    "aws.profile": "profile:default",
+    "aws.onDefaultRegionMissing": "add"
 }

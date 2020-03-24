@@ -43,6 +43,15 @@ setopt auto_list # automatically list choices on ambiguous completion
 setopt auto_menu # automatically use menu completion
 setopt always_to_end # move cursor to end if word had one match
 
+# History
+setopt extended_history
+setopt hist_expire_dups_first
+
+#changing directories
+setopt autocd
+setopt pushd_ignore_dups
+setopt pushdminus
+
 #Colored Prompt
 autoload -U promptinit
 promptinit
@@ -56,5 +65,3 @@ eval "$(direnv hook zsh)" # Direnv
 export DIRENV_LOG_FORMAT= # Remove logs from direnv
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh # FZF fuzzy search
-
-if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi

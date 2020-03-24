@@ -37,10 +37,8 @@
             - rust-src
 - cargo:
     - cargo-watch
-    - cargo-edit
-    - cargo-release
-    - racer:
-      - +nightly
+    # - cargo-release
+    # - racer
 
 # Install asdf
 - asdf:

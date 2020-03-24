@@ -36,6 +36,7 @@ brew "tmux"
 brew "terminal-notifier"
 brew "starship"
 brew "emacs-plus"
+brew "michaeldfallen/formula/git-radar"
 
 # Homebrew Casks
 cask "arq"

@@ -1,6 +1,8 @@
 BASEDIR=$HOME/.dotfiles
 
-source $HOME/.zsh_plugins.sh # Load zsh plugins
+if [ -f ${BASEDIR}/before.zsh ]; then
+    source ${BASEDIR}/before.zsh
+fi
 
 source ${BASEDIR}/zsh/env.zsh
 
@@ -30,10 +32,14 @@ source ${BASEDIR}/zsh/functions/git-functions.zsh
 source ${BASEDIR}/zsh/bindings.zsh
 source ${BASEDIR}/zsh/alias.zsh
 
+source $HOME/.zsh_plugins.sh # Load zsh plugins
+
 for file in ${BASEDIR}/zsh/features/*.zsh; do
         source $file;
 done
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-
+if [ -f ${BASEDIR}/after.zsh ]; then
+    source ${BASEDIR}/after.zsh
+fi

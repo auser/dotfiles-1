@@ -95,7 +95,7 @@
     ~/.zlogin: zsh/zlogin
     ~/.zshenv: zsh/zshenv
     ~/.zshkeys: zsh/zshkeys
-    ~/.p10k.zsh: zsh/p10p.zsh
+    ~/.p10k.zsh: zsh/p10k.zsh
     ~/.tmux.conf: tmux/tmux.conf
     ~/.tmux.conf.local: tmux/tmux.conf.local
     ~/.fonts:
@@ -123,3 +123,6 @@
     ~/Library/Application Support/Code/User/keybindings.json: vscode/keybindings.json
     # IDEA
     ~/.ideavimrc: idea/ideavimrc
+
+- shell:
+  - [ $(brew --prefix)/opt/fzf/install ]

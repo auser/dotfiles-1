@@ -7,6 +7,7 @@ christian-kohler.npm-intellisense
 christian-kohler.path-intellisense
 CoenraadS.bracket-pair-colorizer
 DavidAnson.vscode-markdownlint
+yzhang.markdown-all-in-one
 dbaeumer.jshint
 dbaeumer.vscode-eslint
 DigitalBrainstem.javascript-ejs-support
@@ -15,6 +16,8 @@ eamodio.gitlens
 eg2.vscode-npm-script
 esbenp.prettier-vscode
 rust-lang.rust
+rocketseat.RocketseatReactJS
+bradlc.vscode-tailwindcss
 fabiospampinato.vscode-monokai-night
 FallenMax.mithril-emmet
 JakeBecker.elixir-ls

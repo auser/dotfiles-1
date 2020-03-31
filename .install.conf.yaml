@@ -95,6 +95,7 @@
     ~/.zlogin: zsh/zlogin
     ~/.zshenv: zsh/zshenv
     ~/.zshkeys: zsh/zshkeys
+    ~/.p10k.zsh: zsh/p10p.zsh
     ~/.tmux.conf: tmux/tmux.conf
     ~/.tmux.conf.local: tmux/tmux.conf.local
     ~/.fonts:

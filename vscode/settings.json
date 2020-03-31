@@ -12,9 +12,9 @@
   "editor.renderLineHighlight": "line",
   "editor.gotoLocation.multiple": "goto",
   "editor.semanticHighlighting.enabled": true,
-  // "editor.codeActionsOnSave": {
-  //   "source.organizeImports": true
-  // },
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": false
+  },
 
   "editor.hideCursorInOverviewRuler": true,
   "editor.scrollBeyondLastLine": false,
@@ -41,7 +41,7 @@
   "workbench.editor.showIcons": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
   // window
-  "window.zoomLevel": -1,
+  "window.zoomLevel": 0,
   "window.restoreWindows": "all",
   "window.newWindowDimensions": "maximized",
   // debug
@@ -60,6 +60,9 @@
     "out": true,
     "coverage": true
   },
+  "eslint.workingDirectories": [
+    "packages/*"
+  ],
   // terminal
   "terminal.integrated.copyOnSelection": true,
   // files
@@ -190,8 +193,11 @@
   // typescript
   "typescript.check.npmIsInstalled": false,
   "typescript.updateImportsOnFileMove.enabled": "never",
+  "typescript.suggest.autoImports": true,
+  "typescript.format.enable": true,
   // javascript
-  "javascript.updateImportsOnFileMove.enabled": "never",
+  "javascript.referencesCodeLens.enabled": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
   // git
   "git.autofetch": true,
   "git.confirmSync": false,
@@ -213,6 +219,10 @@
   // extensions
   "extensions.ignoreRecommendations": true,
   "extensions.showRecommendationsOnlyOnDemand": true,
+  "typescriptHero.imports.disableImportRemovalOnOrganize": true,
+  "typescriptHero.imports.removeTrailingIndex": true,
+  "typescript.suggest.completeJSDocs": true,
+  "typescript.suggest.includeAutomaticOptionalChainCompletions": true,
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -227,5 +237,6 @@
     },
     "aws.samcli.location": "/usr/local/bin/sam",
     "aws.profile": "profile:default",
-    "aws.onDefaultRegionMissing": "add"
+    "aws.onDefaultRegionMissing": "add",
+    "tslint.packageManager": "yarn"
 }

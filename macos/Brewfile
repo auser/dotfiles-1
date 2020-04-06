@@ -44,8 +44,10 @@ brew "tree"
 brew "fzf"
 brew "fd"
 brew "bat"
+brew "direnv"
 brew "ripgrep"
 brew "path-extractor"
+brew "go"
 
 # Homebrew Casks
 cask "arq"

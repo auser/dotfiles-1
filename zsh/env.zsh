@@ -12,6 +12,7 @@ export PATH="$PATH:$GOPATH/bin" # Go
 
 export PATH=$PATH:./node_modules/.bin
 
+
 # TODO: remove? ask on nix irc or nix darwin
 # . ~/.nix-profile/etc/profile.d/hm-session-vars.sh
 

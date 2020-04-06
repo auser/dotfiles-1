@@ -59,9 +59,9 @@
         - 2.6.4
     - plugin: golang
       url: https://github.com/kennyp/asdf-golang
-      global: 1.12.1
+      global: 1.13
       versions:
-        - 1.12.1
+        - 1.13
     - plugin: elixir
       url: https://github.com/asdf-vm/asdf-elixir.git
       global: 1.10.1

@@ -123,6 +123,8 @@
     ~/Library/Application Support/Code/User/keybindings.json: vscode/keybindings.json
     # IDEA
     ~/.ideavimrc: idea/ideavimrc
+    # Jupyter
+    ~/Library/LaunchAgents/jupyter.plist: macos/jupyter.plist
 
 - shell:
   - [ $(brew --prefix)/opt/fzf/install ]

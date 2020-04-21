@@ -148,7 +148,7 @@
 [credential "https://git.qjg3.flynnhub.com"]
 	helper = /usr/local/bin/flynn git-credentials
 [credential]
-	helper = osxkeychain
+	helper = !aws codecommit credential-helper $@
 	UseHttpPath = true
 # [remote "origin"]
 # 	fetch = +refs/pull/*/head:refs/remotes/origin/pr/*

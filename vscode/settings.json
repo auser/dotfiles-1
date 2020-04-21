@@ -254,8 +254,10 @@
         "editor.autoIndent": "advanced"
     },
     "aws.samcli.location": "/usr/local/bin/sam",
-    "aws.profile": "profile:default",
+    "aws.profile": "profile:guide-deployer",
     "aws.onDefaultRegionMissing": "add",
     "tslint.packageManager": "yarn",
-    "terminal.integrated.shell.osx": "/bin/zsh"
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "dart.openDevTools": "flutter",
+    "workbench.colorTheme": "Monokai"
 }

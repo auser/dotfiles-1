@@ -420,5 +420,21 @@
   {
     "key": "ctrl+o",
     "command": "workbench.view.extension.todo"
+  },
+  {
+    "key": "shift+cmd+k shift+cmd+m",
+    "command": "workbench.extensions.action.showRecommendedKeymapExtensions"
+  },
+  {
+    "key": "cmd+k cmd+m",
+    "command": "-workbench.extensions.action.showRecommendedKeymapExtensions"
+  },
+  {
+    "key": "cmd+k cmd+m",
+    "command": "workbench.action.editor.changeLanguageMode"
+  },
+  {
+    "key": "cmd+k m",
+    "command": "-workbench.action.editor.changeLanguageMode"
   }
 ]

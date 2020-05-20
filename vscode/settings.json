@@ -1,11 +1,5 @@
 {
-  // looks
-  "workbench.colorCustomizations": {
-    "editor.lineHighlightBackground": "#212121"
-  },
-
   "files.autoSave": "onFocusChange",
-
   // breadcrumbs
   "breadcrumbs.enabled": true,
   // editor
@@ -15,15 +9,17 @@
   "editor.codeActionsOnSave": {
     "source.organizeImports": false
   },
-
+  "workbench.colorCustomizations": {
+    "editor.lineHighlightBackground": "#212121"
+  },
   "editor.hideCursorInOverviewRuler": true,
   "editor.scrollBeyondLastLine": false,
-  "editor.lineHeight": 26,
+  "editor.lineHeight": 22,
   "editor.occurrencesHighlight": false,
   "editor.multiCursorModifier": "alt",
   "editor.overviewRulerBorder": false,
   "editor.overviewRulerLanes": 0,
-  "editor.renderIndentGuides": true,
+  "editor.renderIndentGuides": false,
   "editor.folding": false,
   "editor.snippetSuggestions": "top",
   "editor.lightbulb.enabled": false,
@@ -31,17 +27,8 @@
   "editor.cursorBlinking": "solid",
   "editor.lineNumbers": "on",
   "editor.cursorStyle": "line",
-  // workbench
-  "workbench.list.horizontalScrolling": true,
-  "workbench.statusBar.feedback.visible": false,
-  "workbench.fontAliasing": "antialiased",
-  "workbench.activityBar.visible": false,
-  "workbench.startupEditor": "none",
-  "workbench.settings.editor": "json",
-  "workbench.editor.showIcons": false,
-  "workbench.settings.enableNaturalLanguageSearch": false,
   // window
-  "window.zoomLevel": 0,
+  "window.zoomLevel": -1,
   "window.restoreWindows": "all",
   "window.newWindowDimensions": "maximized",
   // debug
@@ -58,11 +45,12 @@
   "search.exclude": {
     "dist": true,
     "out": true,
-    "coverage": true
+    "coverage": true,
+    ".history": true,
+    ".cache": true
   },
-  "eslint.workingDirectories": [
-    "packages/*"
-  ],
+  "eslint.workingDirectories": ["packages/*"],
+  "eslint.workingDirectories": ["packages/*"],
   // terminal
   "terminal.integrated.copyOnSelection": true,
   // files
@@ -78,127 +66,18 @@
     "**/dist": true,
     "**/*.bs.js": true
   },
-  // explorer
-  "explorer.openEditors.visible": 0,
-  "explorer.confirmDragAndDrop": false,
-  "explorer.decorations.badges": false,
-  // python
-  "python.linting.pylintArgs": ["--errors-only"],
-  // code runner
-  "code-runner.clearPreviousOutput": true,
-  "code-runner.executorMap": {
-    "python": "python3",
-    "typescript": "ts-node --transpile-only"
-  },
-  // prettier
   "editor.formatOnSave": true,
   // code runner
   "code-runner.runInTerminal": false,
   // vim
+
+  "vim.disableExtension": true,
   "vim.leader": " ",
   "vim.debug.silent": true,
   "vim.cursorStylePerMode.normal": "underline",
   "vim.useSystemClipboard": true,
   "vim.easymotion": true,
   "vim.easymotionMarkerBackgroundColor": "red",
-  // space map
-  "vim.normalModeKeyBindings": [
-    {
-      "before": ["<leader>", "w"],
-      "after": [],
-      "commands": [
-        {
-          "command": "workbench.action.files.save",
-          "args": []
-        }
-      ]
-    },
-    {
-      "before": ["<leader>", "q"],
-      "after": [],
-      "commands": [
-        {
-          "command": "workbench.action.closeActiveEditor",
-          "args": []
-        }
-      ]
-    },
-    {
-      "before": ["<leader>", "a"],
-      "after": [],
-      "commands": [
-        {
-          "command": "workbench.action.files.save",
-          "args": []
-        },
-        {
-          "command": "workbench.action.closeActiveEditor",
-          "args": []
-        }
-      ]
-    },
-    {
-      "before": ["K"],
-      "after": ["leader", "leader", "k"]
-    },
-    {
-      "before": ["J"],
-      "after": ["leader", "leader", "j"]
-    },
-    {
-      "before": ["<leader>", "i"],
-      "after": ["y", "i", "\""]
-    },
-    {
-      "before": ["Y"],
-      "after": ["y", "$"]
-    }
-  ],
-  // go
-  // "go.lintTool": "golint",
-  // "go.lintOnSave": "package",
-  // "go.goroot": "~/go",
-  "go.goroot": "~/go",
-  "go.toolsGopath": "~/go/src/golang.org/tools",
-  // "go.inferGopath": true,
-  "terminal.integrated.shellArgs.linux": ["-l"],
-  "terminal.integrated.automationShell.linux": "/bin/zsh",
-  "[go]": {
-    "editor.snippetSuggestions": "none",
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": true
-    }
-  },
-  "go.useLanguageServer": true,
-  "go.liveErrors": {
-    "enabled": true,
-    "delay": 500
-  },
-  "go.languageServerExperimentalFeatures": {
-      "format": true,
-      "autoComplete": true,
-      "rename": true,
-      "goToDefinition": true,
-      "hover": true,
-      "signatureHelp": true,
-      "goToTypeDefinition": true,
-      "goToImplementation": true,
-      "documentSymbols": true,
-      "workspaceSymbols": true,
-      "findReferences": true,
-      "diagnostics": true,
-  },
-  "go.languageServerFlags": [
-      "-rpc.trace", // for more detailed debug logging
-      "serve",
-      "--debug=localhost:6060", // to investigate memory usage, see profiles
-  ],
-  "files.eol": "\n", // formatting only supports LF line endings
-  // files
-  "files.associations": {
-    "*.toml": "toml"
-  },
   "explorer.confirmDelete": false,
   // python
   "python.pythonPath": "/run/current-system/sw/bin/python3",
@@ -234,30 +113,37 @@
     "suppressShowKeyBindingsNotice": true,
     "suppressUpdateNotice": true
   },
-  // extensions
-  "extensions.ignoreRecommendations": true,
-  "extensions.showRecommendationsOnlyOnDemand": true,
-  "typescriptHero.imports.disableImportRemovalOnOrganize": true,
-  "typescriptHero.imports.removeTrailingIndex": true,
-  "typescript.suggest.completeJSDocs": true,
-  "typescript.suggest.includeAutomaticOptionalChainCompletions": true,
-  "[jsonc]": {
+  // Markdown
+  "markdown-pdf.executablePath": "/Applications/Chromium.app/Contents/MacOS/Chromium",
+  "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "aws.samcli.location": "/usr/local/bin/sam",
+  "aws.profile": "profile:guide-deployer",
+  "aws.onDefaultRegionMissing": "add",
+  "tslint.packageManager": "yarn",
+  "terminal.integrated.shell.osx": "/bin/zsh",
+  "dart.openDevTools": "flutter",
+  "workbench.colorTheme": "Monokai Night",
+  "todo-tree.tree.showScanModeButton": false,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "editor.wordWrap": "on",
+  "[scss]": {},
+  "vscode-neovim.highlightGroups.unknownHighlight": {},
+  "vscode-neovim.neovimPath": "/usr/local/bin/nvim",
+  "vim.easymotionMarkerFontSize": "",
+  "go.useLanguageServer": true,
+  "go.languageServerExperimentalFeatures": {
+    "diagnostics": true,
+    "documentLink": true
   },
-  "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jinja]": {
-        "editor.autoIndent": "advanced"
-    },
-    "aws.samcli.location": "/usr/local/bin/sam",
-    "aws.profile": "profile:guide-deployer",
-    "aws.onDefaultRegionMissing": "add",
-    "tslint.packageManager": "yarn",
-    "terminal.integrated.shell.osx": "/bin/zsh",
-    "dart.openDevTools": "flutter",
-    "workbench.colorTheme": "Monokai"
+  "go.gopath": "~/go",
+  "[go]": {
+    "editor.snippetSuggestions": "none",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  }
 }

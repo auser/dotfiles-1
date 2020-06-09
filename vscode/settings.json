@@ -4,10 +4,12 @@
   "breadcrumbs.enabled": true,
   // editor
   "editor.renderLineHighlight": "line",
-  "editor.gotoLocation.multipleLocations": ["goto"],
+  "editor.gotoLocation.multipleLocations": [
+    "goto"
+  ],
   "editor.semanticHighlighting.enabled": true,
   "editor.codeActionsOnSave": {
-    "source.organizeImports": false
+    "source.organizeImports": true
   },
   "workbench.colorCustomizations": {
     "editor.lineHighlightBackground": "#212121"
@@ -49,8 +51,12 @@
     ".history": true,
     ".cache": true
   },
-  "eslint.workingDirectories": ["packages/*"],
-  "eslint.workingDirectories": ["packages/*"],
+  "eslint.workingDirectories": [
+    "packages/*"
+  ],
+  "eslint.workingDirectories": [
+    "packages/*"
+  ],
   // terminal
   "terminal.integrated.copyOnSelection": true,
   // files
@@ -70,7 +76,6 @@
   // code runner
   "code-runner.runInTerminal": false,
   // vim
-
   "vim.disableExtension": true,
   "vim.leader": " ",
   "vim.debug.silent": true,
@@ -105,7 +110,10 @@
   "gitlens.codeLens.enabled": false,
   "gitlens.settings.mode": "advanced",
   "gitlens.keymap": "chorded",
-  "gitlens.codeLens.scopes": ["containers", "document"],
+  "gitlens.codeLens.scopes": [
+    "containers",
+    "document"
+  ],
   "gitlens.views.fileHistory.enabled": true,
   "gitlens.views.lineHistory.enabled": true,
   "gitlens.advanced.messages": {
@@ -124,7 +132,6 @@
   "tslint.packageManager": "yarn",
   "terminal.integrated.shell.osx": "/bin/zsh",
   "dart.openDevTools": "flutter",
-  "workbench.colorTheme": "Monokai Night",
   "todo-tree.tree.showScanModeButton": false,
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
@@ -134,13 +141,17 @@
   "vscode-neovim.neovimPath": "/usr/local/bin/nvim",
   "vim.easymotionMarkerFontSize": "",
   "go.useLanguageServer": true,
+  "go.languageServerFlags": [
+    // "-rpc.trace"
+  ],
   "go.languageServerExperimentalFeatures": {
-    "diagnostics": true,
-    "documentLink": true
+    "format": true,
+    // "documentLink": true
   },
   "go.gopath": "~/go",
+  "go.formatTool": "goimports",
   "[go]": {
-    "editor.snippetSuggestions": "none",
+    "editor.snippetSuggestions": "inline",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
       "source.organizeImports": true
@@ -151,5 +162,8 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "[rust]": {
+    "editor.defaultFormatter": "statiolake.vscode-rustfmt"
+  }
 }

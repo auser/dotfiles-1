@@ -8,3 +8,6 @@
 hammerspoon/Spoons/
 emacs/spacemacs/
 .history
+node_modules/
+yarn.lock
+asdf

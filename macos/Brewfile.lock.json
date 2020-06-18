@@ -11,19 +11,19 @@
         "revision": "1808a80e113fa05188f028d57afcea26b964067f"
       },
       "homebrew/bundle": {
-        "revision": "256f6724887c7c8e2cb793b94b13a44d03b69c79"
+        "revision": "4b9a95355a4784a6839821ec58467f8e1ed96ad7"
       },
       "homebrew/cask": {
-        "revision": "73c5959a59149a2a049a01edc7b63718289b87b2"
+        "revision": "489c4688c4ce603d351dbc3a969e90db039b046d"
       },
       "homebrew/cask-fonts": {
-        "revision": "0726e43401a9d67d40b74ece50f3b5e982795f01"
+        "revision": "4002bfa454011d0bb83f8897637055bbe5f9550a"
       },
       "homebrew/cask-versions": {
-        "revision": "7f052c54c3ab0b54a3d2e3a8532d191fa992d9dc"
+        "revision": "e883610196d9b72a0f3bc506d737dec3c8c46b83"
       },
       "homebrew/core": {
-        "revision": "3ba623328fd2bd092c8793c7e3ca5aa721572d18"
+        "revision": "14beeb3b2ed43a753be9ab97c45a4c1d4669c449"
       },
       "d12frosted/emacs-plus": {
         "revision": "51ddb7f9eeefcce8836a08f23483085372a1b805"
@@ -840,9 +840,9 @@
   "system": {
     "macos": {
       "catalina": {
-        "HOMEBREW_VERSION": "2.4.0-53-g748af98",
+        "HOMEBREW_VERSION": "2.4.0-69-g67c843b",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "3ba623328fd2bd092c8793c7e3ca5aa721572d18",
+        "Homebrew/homebrew-core": "14beeb3b2ed43a753be9ab97c45a4c1d4669c449",
         "CLT": "11.0.33.17",
         "Xcode": "11.5",
         "macOS": "10.15.5"

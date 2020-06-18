@@ -35,8 +35,8 @@
             - rust-analysis
             - rls
             - rust-src
-- cargo:
-    - cargo-watch
+# - cargo:
+    # - cargo-watch
     # - cargo-release
     # - racer
 
@@ -114,6 +114,8 @@
     ~/.antibody: config/antibody.txt
     # Hammerspoon
     ~/.hammerspoon: hammerspoon
+    # Doing
+    ~/.doingrc: config/doing.yml
     # hyper.js
     ~/.hyper.js: config/hyper.js
     # Neovim

@@ -1,16 +1,43 @@
+add_newline = false
+
+[character]
+symbol = "→"
+
 [aws]
-symbol = " "
+style = "bold blue"
+symbol = "🌥️ "
+displayed_items = "region"
 
 [battery]
-full_symbol = ""
-charging_symbol = ""
-discharging_symbol = ""
+full_symbol = "🔋"
+charging_symbol = "⚡️"
+discharging_symbol = "💀"
+
+[[battery.display]]
+threshold = 10
+style = "bold red"
 
 [conda]
-symbol = " "
+symbol = "C "
 
 [git_branch]
-symbol = " "
+symbol = " "
+
+[git_status]
+enabled = true
+conflicted = "🏳"
+ahead = "🏎💨"
+behind = "😰"
+diverged = "😵"
+untracked = "🤷‍"
+stashed = "📦"
+modified = "📝"
+staged.value = "++"
+staged.style = "green"
+staged_count.enabled = true
+staged_count.style = "green"
+renamed = "👅"
+deleted = "🗑"
 
 [golang]
 symbol = " "
@@ -22,22 +49,28 @@ symbol = " "
 symbol = " "
 
 [memory_usage]
-symbol = " "
+disabled = false
+show_percentage = true
+show_swap = true
+threshold = -1
+symbol = "🐏 "
+separator = "/"
+style = "bold dimmed green"
 
 [nodejs]
-symbol = " "
-
-[package]
-symbol = " "
-
-[php]
-symbol = " "
+symbol = "⬢ "
 
 [python]
-symbol = " "
+symbol = "🐍 "
 
 [ruby]
-symbol = " "
+symbol = "💎 "
 
 [rust]
-symbol = " "
+symbol = "🦀 "
+
+[time]
+disabled = false
+format = "🕙[ %T ]"
+utc_time_offset = "-5"
+time_range = "10:00:00-14:00:00"

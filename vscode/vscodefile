@@ -1,7 +1,6 @@
 jamesbirtles.svelte-vscode
 ardenivanov.svelte
 yzhang.markdown-all-in-one
-CoenraadS.bracket-pair-colorizer
 kevinkyang.auto-comment-blocks
 ms-python.python
 ms-vscode.Go
@@ -10,3 +9,11 @@ steoates.autoimport
 rust-lang.rust
 Dart-Code.flutter
 FallenMax.mithril-emmet
+CoenraadS.bracket-pair-colorizer-2
+christian-kohler.path-intellisense
+aaron-bond.better-comments
+eamodio.gitlens
+esbenp.prettier-vscode
+akamud.vscode-theme-onedark
+akamud.vscode-theme-onelight
+vscode-icons-team.vscode-icons

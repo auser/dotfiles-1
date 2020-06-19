@@ -16,5 +16,9 @@
   "terminal.integrated.inheritEnv": false,
   "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
-  "[yaml]": {}
+  "[yaml]": {},
+  "workbench.iconTheme": "vscode-icons",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

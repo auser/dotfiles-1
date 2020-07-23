@@ -141,14 +141,14 @@
 [heroku]
 	account = personal
 [user]
-	name = Ari
-	email = ari@fullstack.io
+	name = Ari Lerner
+	email = alerner@amazon.com
 [http "https://git.qjg3.flynnhub.com"]
 	sslCAInfo = /Users/auser/.flynn/ca-certs/flynn-1447223868.pem
 [credential "https://git.qjg3.flynnhub.com"]
 	helper = /usr/local/bin/flynn git-credentials
+
 [credential]
-	helper = !aws codecommit credential-helper $@
 	UseHttpPath = true
 [filter "lfs"]
 	clean = git-lfs clean -- %f

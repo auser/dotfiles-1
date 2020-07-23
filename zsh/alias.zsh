@@ -304,3 +304,6 @@ alias gss='git show --word-diff=color' # See changes made
 
 # Emacs
 alias emacs="open /Applications/Emacs.app $@"
+
+# Ruby
+alias be="bundle exec"

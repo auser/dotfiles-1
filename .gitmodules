@@ -17,14 +17,6 @@
 [submodule "vendor/dotbot-brewfile"]
 	path = vendor/dotbot-brewfile
 	url = https://github.com/sobolevn/dotbot-brewfile.git
-[submodule "hammerspoon/Spoons/miro-windows-manager"]
-	path = hammerspoon/Spoons/miro-windows-manager
-	url = https://github.com/miromannino/miro-windows-manager.git
-	ignore = dirty
-[submodule "hammerspoon/Spoons/Lunette"]
-	path = hammerspoon/Spoons/Lunette
-	url = https://github.com/scottwhudson/Lunette.git
-	ignore = dirty
 [submodule "emacs/spacemacs"]
 	path = emacs/spacemacs
 	url = https://github.com/syl20bnr/spacemacs.git
@@ -32,3 +24,6 @@
 [submodule "asdf"]
 	path = asdf
 	url = https://github.com/asdf-vm/asdf.git
+[submodule "hammerspoon"]
+	path = hammerspoon
+	url = https://github.com/agzam/spacehammer.git

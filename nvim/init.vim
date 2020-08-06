@@ -1,197 +1,185 @@
-" Autocomplete engine
-function! DoRemote(arg)
-  UpdateRemotePlugins
-endfunction
+set nocompatible " be iMproved, required
+filetype off     " required
 
-" Install plugins
+" Keep Plug commands between plug#begin() and plug#end().
 call plug#begin()
-" Looks
-Plug 'nikitavoloboev/vim-monokai-night' " Theme
-Plug 'itchyny/lightline.vim' " Light and configurable statusline/tabline plugin.
 
-" Utility
-Plug 'romainl/vim-cool' " Stop matching after search is done.
-Plug 'jiangmiao/auto-pairs' " Insert or delete brackets, parens, quotes in pair.
-Plug 'w0rp/ale' " Asynchronous Lint Engine.
-Plug 'rizzatti/dash.vim' " Search Dash app.
-Plug 'jremmen/vim-ripgrep' " Use RipGrep in Vim and display results in a quickfix list.
+Plug 'janko/vim-test'             " Run Ruby and Elixir tests
+Plug 'nikolalsvk/vim-rails'       " Rails plugin
 
-" Prettier support
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'npm install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
+Plug 'airblade/vim-gitgutter'     " Show git diff of lines edited
+Plug 'tpope/vim-fugitive'         " :Gblame
 
-Plug 'scrooloose/nerdcommenter' " Quick comments.
-Plug 'unblevable/quick-scope' " Highlight f, F jumps.
-Plug 'Shougo/vimproc.vim', {'do' : 'make'} " Interactive command execution.
-Plug 'tpope/vim-repeat' " Enable repeating supported plugin maps.
-Plug 'tpope/vim-surround' " Quoting/parenthesizing made simple.
-Plug 'junegunn/vim-easy-align' " Simple, easy-to-use alignment.
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " Fzf search. 
-Plug 'junegunn/fzf.vim' " Fzf search.
-Plug 'wakatime/vim-wakatime' " Automatic time tracking.
-Plug 'haya14busa/incsearch.vim' " Improved incremental searching.
-Plug 'easymotion/vim-easymotion' " Vim motions on speed.
-Plug 'thinca/vim-quickrun' " Run commands quickly.
+Plug 'tpope/vim-endwise'          " Autocomplete end after a do
+Plug 'mileszs/ack.vim'            " Use ack in Vim
 
-" Git
-Plug 'tpope/vim-fugitive' " Git wrapper.
-Plug 'mhinz/vim-signify' " Show a diff using Vim its sign column.
+Plug 'pangloss/vim-javascript'    " JavaScript support
+Plug 'leafgarland/typescript-vim' " TypeScript syntax
+Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
+Plug 'jparise/vim-graphql'        " GraphQL syntax
+Plug 'styled-components/vim-styled-components'
 
-" Nix
-Plug 'LnL7/vim-nix', { 'for': 'nix' } " Vim configuration files for Nix.
-call plug#end()
+Plug 'vim-airline/vim-airline'    " Vim powerline
 
-" Options
-set mouse=a " Copy selected text with mouse to system clipboard
-set undofile " Save undos after file closes
-set wildmode=longest:list,full " Complete longest common string, then each full match
-set updatetime=250 " If this many milliseconds nothing is typed the swap file will be written to disk
-set visualbell " Turn off the audio bell (no beeps)
-set clipboard^=unnamed  " Make yanking copy to clipboard
-set gdefault " Always do global substitutions
-set title " Set terminal title
-set whichwrap+=<,>,[,]
-set completeopt-=preview " No annoying scratch preview above
-set expandtab " Spaces on tabs
-set shiftwidth=4
-set softtabstop=2
-set undolevels=1000
-set smartindent " Indentation
-set shortmess=Ia " Disable startup message
-set fileencoding=utf-8 " Encoding when written to file
-set fileformat=unix " Line endings
-set timeout timeoutlen=1000 ttimeoutlen=10 " TODO: ?
-set autowrite " Automatically save before :next, :make etc
-set ignorecase " Search case insensitive:
-set smartcase " .. but not when search pattern contains upper case characters
-set nocursorcolumn
-set nocursorline
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'           " Set up fzf and fzf.vim
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" All of your Plugins must be added before the following line
+call plug#end()              " required
+filetype plugin indent on    " required
+
+" Leader key is SPACE, I find it the best
+let mapleader = " "
+
+" Look and Feel settings
+syntax enable
+set background=dark
+set wildmenu " when opening a file with e.g. :e ~/.vim<TAB> there is a graphical menu of all the matches
+set ttyfast
+set lazyredraw
+set updatetime=300
+
+" Numbers
 set number
-set wrap
-set textwidth=79
-set formatoptions=qrn1
-set notimeout
-set ttimeout
-set ttimeoutlen=10
-set nobackup " Don't create annoying backup files
-set path=+** " Search down into subfolders
+set numberwidth=4
+set ruler
+
+" paste mode
+nnoremap <F5> :set invpaste paste?<CR>
+set pastetoggle=<F5>
+set showmode
+
+" Treat long lines as break lines
+map j gj
+map k gk
+
+" Indentation
+set autoindent
+set cindent
+set smartindent
 
 " Folding
-set foldcolumn=1
-set foldlevel=20
-set foldlevelstart=7
+" Enable folding
 set foldmethod=syntax
-set foldignore=""
-set nofoldenable
+set foldlevel=99
 
-" Buffers
-set hidden
+" Enable folding with the z key
+nmap z za
 
-" Searching
-set wrapscan
-set ignorecase
-set smartcase
+" Disable all bells and whistles
+set noerrorbells visualbell t_vb=
 
-" Usable 'Tab'
-set shiftwidth=4
-set tabstop=4
-set softtabstop=4
+" Ack tricks
+let g:ackprg = 'ag --vimgrep'
+nmap <leader>a :Ack! ""<Left>
+nmap <leader>A :Ack! "\b<cword>\b"<CR>
+
+" Tab Options
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2 " Number of spaces a tab counts when editing
 set expandtab
 
-" UI
-set cursorline  " Highlight current line
-set showmatch
-set tabstop=4 " Default indentation is 4 spaces long and uses tabs, not spaces
-set matchtime=2
-set termguicolors " Enable true colors support
-let python_highlight_all = 1
+" Delete empty space from the end of lines on every save
+autocmd BufWritePre * :%s/\s\+$//e
 
-set completeopt+=menu,menuone " Completion
+" Set default encoding to utf-8
+set encoding=utf-8
+set termencoding=utf-8
 
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1 " True color
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+" Disable backups and swap files
+set nobackup
+set nowritebackup
+set noswapfile
 
-" Open help vertically
-command! -nargs=* -complete=help Help vertical belowright help <args>
-autocmd FileType help wincmd L
+set ignorecase " Ignore case when searching
+set smartcase  " When searching try to be smart about cases
+set nohlsearch " Don't highlight search term
+set incsearch  " Jumping search
 
-:autocmd InsertEnter,InsertLeave * set cul! " Notify on mode change visually
+" Always show the status line
+set laststatus=2
 
-set grepprg=rg\ --vimgrep
-set grepformat^=%f:%l:%c:%m
+" Allow copy and paste from system clipboard
+set clipboard=unnamed
 
-set viewoptions=cursor,slash,unix
+" Spellcheck for features and markdown
+au BufRead,BufNewFile *.md setlocal spell
+au BufRead,BufNewFile *.md.erb setlocal spell
+au BufRead,BufNewFile *.feature setlocal spell
 
-" Theme
-colorscheme monokai-night
+" Delete characters outside of insert area
+set backspace=indent,eol,start
 
-" Bufferline
-let g:bufferline_echo = 0
+" +++ Shortcuts +++
+" Open Buffer
+nnoremap <silent><leader>l :Buffers<CR>
+" Open test file for a current file
+nnoremap <silent><leader>s :A<CR>
+" Open test file for a current file in a vertical window
+nnoremap <silent><leader>v :AV<CR>
+" Vertically split screen
+nnoremap <silent><leader>\ :vs<CR>
+" Split screen
+nnoremap <silent><leader>/ :split<CR>
 
-let g:AutoPairsFlyMode = 0
-let g:AutoPairsShortcutToggle = '<C-P>'
-au filetype vim let b:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'", '`':'`'} " Don't autocomplete in vim
+" Faster saving and exiting
+nnoremap <silent><leader>w :w!<CR>
+nnoremap <silent><leader>q :q!<CR>
+nnoremap <silent><leader>x :x<CR>
+" Open Vim configuration file for editing
+nnoremap <silent><leader>2 :e ~/.vimrc<CR>
+" Source Vim configuration file and install plugins
+nnoremap <silent><leader>1 :source ~/.vimrc \| :PlugInstall<CR>
 
-" Vim session
-let g:session_autosave="no"
-let g:session_autoload="no"
+" If fzf installed using git
+set rtp+=~/.fzf
+" Map fzf search to CTRL P
+nnoremap <C-p> :GFiles<Cr>
+" Map fzf + ag search to CTRL P
+nnoremap <C-g> :Ag<Cr>
 
-" Command mappings
-cabbrev rp Rp
+" vim-test shortcut for running tests
+nnoremap <silent><leader>; :TestNearest<CR>
+nnoremap <silent><leader>' :TestFile<CR>
+let test#ruby#rspec#executable = 'spring rspec'
 
-" CTRL mappings
-nnoremap <C-L> :Files<CR>
+" Extra <CR> is for disabling /"Press ENTER or type command to continue/"
+nnoremap <silent><leader>e :Exp<CR><CR>
 
-" Space mappings
-nnoremap <SPACE> <Nop>
-let mapleader="\<Space>"
-let maplocalleader = "\<Space>"
-nnoremap <leader>= yypVr=
+" Easier movement between split windows CTRL + {h, j, k, l}
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
 
-" Space q
-nmap <Leader>q    :q<CR>
+" Switch between buffers
+:nnoremap <C-d> :bdelete<CR>
 
-" Space w
-" Save
-nmap <Leader>w :w<CR>
+" CoC extensions
+let g:coc_global_extensions = ['coc-solargraph', 'coc-tsserver', 'coc-json']
 
-" Space y
-" Yank whole file
-nnoremap <Leader>y :%y<CR>
+" Add CoC Prettier if prettier is installed
+if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
+  let g:coc_global_extensions += ['coc-prettier']
+endif
 
-" Space i
-nnoremap <Leader>ii :PlugInstall<CR>
-" Update plugins
-nnoremap <Leader>iu :PlugUpdate<CR>
-" Check vim health
-nnoremap <Leader>ih :CheckHealth<CR>
+" Add CoC ESLint if ESLint is installed
+if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
+  let g:coc_global_extensions += ['coc-eslint']
+endif
 
-" Space a
-nnoremap <Leader>a :wq<CR>
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
-" Space s
-" Source vimrc
-nnoremap <Leader>s :source ~/.dotfiles/nvim/init.vim<CR>
+" Remap keys for applying codeAction to the current line.
+nmap <leader>ac  <Plug>(coc-codeaction)
+" Apply AutoFix to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
 
-" Space d
-nmap <Leader>d :bd<CR>
-
-" Auto commands
-au FileType dirvish call fugitive#detect(@%)
-au FocusLost * :wa " Auto save everything
-
-" Remaps
-" Search and replace
-xnoremap gs y:%s/<C-r>"//g<Left><Left>
-
-" Yank a line with Y.
-nnoremap Y y$
-
-" Other
-set guicursor=n-v-c:hor20,i-ci:ver20 " Make cursor block in insert mode and underline in normal mode
-autocmd VimLeave * set guicursor=a:ver25-blinkon25 " Make cursor block when leaving to shell
-
-" Testing
-set signcolumn=yes
-set foldcolumn=0 " Remove sidebar column
+" Show autocomplete when Tab is pressed
+inoremap <silent><expr> <Tab> coc#refresh()

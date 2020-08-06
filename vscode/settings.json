@@ -17,7 +17,6 @@
   "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "[yaml]": {},
-  "workbench.iconTheme": "vscode-icons",
   "[typescript]": {},
   "typescript.tsserver.log": "verbose",
   "typescript.updateImportsOnFileMove.enabled": "always",
@@ -26,14 +25,10 @@
     {
       "name": "vscode-expo-manifest",
       "url": "file:///Users/alerner/Library/Application%20Support/Code/User/globalStorage/bycedric.vscode-expo/manifest-38.0.0.json",
-      "fileMatch": [
-        "app.json",
-        "app.config.json"
-      ]
+      "fileMatch": ["app.json", "app.config.json"]
     }
   ],
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "vsicons.dontShowNewVersionMessage": true
+  }
 }

@@ -28,3 +28,6 @@
 [submodule "spacehammer"]
 	path = spacehammer
 	url = https://github.com/agzam/spacehammer.git
+[submodule "emacs/doom-emacs"]
+	path = emacs/doom-emacs
+	url = https://github.com/hlissner/doom-emacs

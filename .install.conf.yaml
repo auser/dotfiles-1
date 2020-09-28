@@ -102,7 +102,9 @@
       create: true
       path: local/fonts/
     ~/.emacs.d:
-      path: emacs/spacemacs
+      path: emacs/doom-emacs
+    ~/.doom.d:
+      path: emacs/doom.d
     ~/.spacemacs: emacs/spacemacs.conf
     ~/.config/starship.toml: config/starship.toml
     ~/.zshrc: zsh/zshrc.zsh
@@ -130,3 +132,4 @@
 
 - shell:
   - [ $(brew --prefix)/opt/fzf/install ]
+  - [ ~/emacs.d/doom-emacs/bin/doom install ]

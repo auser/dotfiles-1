@@ -14,7 +14,7 @@ cd "${BASEDIR}"
 git submodule update --init --recursive .
 
 if [ ! -f ${BASEDIR}/hammerspoon/Spoons/Lunette.spoon ]; then
-    if [ ! -d ${BASEDIR}/hammerspoon/Spoons/Lunette/Lunette.spoon ]; then
+    if [ ! -d ${BASEDIR}/hammerspoon/Spoons/Lunette ]; then
         /bin/echo "A" | unzip -qq ${BASEDIR}/hammerspoon/Spoons/Lunette/Spoons/Lunette.spoon.zip -d ${BASEDIR}/hammerspoon/Spoons
     fi
 fi

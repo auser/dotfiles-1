@@ -4,7 +4,7 @@
   "breadcrumbs.enabled": true,
   // editor
   "editor.renderLineHighlight": "line",
-  "window.zoomLevel": 3,
+  "window.zoomLevel": 1,
   "go.formatTool": "goimports",
   "go.useLanguageServer": true,
   "editor.tabSize": 2,
@@ -25,10 +25,19 @@
     {
       "name": "vscode-expo-manifest",
       "url": "file:///Users/alerner/Library/Application%20Support/Code/User/globalStorage/bycedric.vscode-expo/manifest-38.0.0.json",
-      "fileMatch": ["app.json", "app.config.json"]
+      "fileMatch": [
+        "app.json",
+        "app.config.json"
+      ]
     }
   ],
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "python.languageServer": "Microsoft",
+  "python.dataScience.alwaysTrustNotebooks": true,
+  "css.validate": false,
+  "tailwindCSS.emmetCompletions": true
 }

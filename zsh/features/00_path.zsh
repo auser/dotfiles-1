@@ -4,7 +4,6 @@
 # Base PATH
 PATH=/usr/local/sbin:/sbin:/usr/sbin:/bin:/usr/bin:./node_modules/bin:./node_modules/.bin:./bin
 
-
 # Conditional PATH additions
 for path_candidate in /opt/local/sbin \
   ~/.toolbox/bin \
@@ -49,5 +48,9 @@ dedupe_path() {
 
   export PATH=${(j+:+)result}
 }
+
+export GUILE_LOAD_PATH="/usr/local/share/guile/site/3.0"
+export GUILE_LOAD_COMPILED_PATH="/usr/local/lib/guile/3.0/site-ccache"
+export GUILE_SYSTEM_EXTENSIONS_PATH="/usr/local/lib/guile/3.0/extensions"
 
 autoload bashcompinit

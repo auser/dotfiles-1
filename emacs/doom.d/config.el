@@ -52,3 +52,38 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+
+(add-load-path! "~/.dotfiles/emacs/packages")
+(use-package ox-tailwind :after ox)
+
+(use-package! org-super-agenda
+  :after org-agenda
+  :init
+  (setq org-super-agenda-groups '((:name "Today"
+                                    :time-grid t
+                                    :scheduled today)
+                                   (:name "Due Toady"
+                                    :deadline today)
+                                   (:name "Important"
+                                    :priority "A")
+                                   (:name "Overdue"
+                                    :deadline past)
+                                   (:name "Due soon"
+                                    :deadline future)
+                                   (:name "Big Outcomes"
+                                    :tag "bo")))
+  :config
+  (org-super-agenda-mode))
+
+(after! org
+ :map org-mode-map
+ :n "M-j" #'org-metaup
+ :n "M-k" #'org-metadown)
+
+(setq
+ doom-font (font-spec :family "SF Mono")
+ js-indent-level 2
+ typescript-indent-level 2
+ projectile-project-search-path '("~/Development")
+ )

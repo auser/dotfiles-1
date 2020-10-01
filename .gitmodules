@@ -31,3 +31,6 @@
 [submodule "emacs/doom-emacs"]
 	path = emacs/doom-emacs
 	url = https://github.com/hlissner/doom-emacs
+[submodule "emacs/packages/ox-tailwind"]
+	path = emacs/packages/ox-tailwind
+	url = https://github.com/vascoferreira25/ox-tailwind

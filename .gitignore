@@ -11,3 +11,4 @@ emacs/spacemacs/
 node_modules/
 yarn.lock
 asdf
+emacs/doom-emacs/

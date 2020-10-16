@@ -55,7 +55,6 @@
 
 
 (add-load-path! "~/.dotfiles/emacs/packages")
-(use-package ox-tailwind :after ox)
 
 (use-package! org-super-agenda
   :after org-agenda
@@ -81,6 +80,11 @@
  :n "M-j" #'org-metaup
  :n "M-k" #'org-metadown)
 
+(use-package! org-fancy-priorities
+  :hook (org-mode . org-fancy-priorities-mode)
+  :config
+  (setq org-fancy-priorities-list '("⚡️️" "⚡" "⚡")))
+
 (add-hook 'js2-mode-hook 'prettier-js-mode)
 (add-hook 'web-mode-hook 'prettier-js-mode)
 
@@ -98,6 +102,17 @@
 
 (add-hook 'before-save-hook 'tide-format-before-save)
 (add-hook 'typescript-mode-hook #'setup-tide-mode)
+
+(after! evil-surround
+  (let ((pairs '((?g "$" . "$")
+                 (?h "(" . ")")
+                 (?j "[" . "]")
+                 (?k "{" . "}")
+                 (?l "<" . ">")
+                 (?ø "'" . "'")
+                 (?æ "\"" . "\""))))
+    (prependq! evil-surround-pairs-alist pairs)
+    (prependq! evil-embrace-evil-surround-keys (mapcar #'car pairs))))
 
 (setq
  doom-font (font-spec :family "SF Mono")

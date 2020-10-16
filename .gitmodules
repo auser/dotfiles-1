@@ -34,3 +34,6 @@
 [submodule "emacs/packages/ox-tailwind"]
 	path = emacs/packages/ox-tailwind
 	url = https://github.com/vascoferreira25/ox-tailwind
+[submodule "emacs/packages/aweshell"]
+	path = emacs/packages/aweshell
+	url = https://github.com/manateelazycat/aweshell.git

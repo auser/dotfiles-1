@@ -29,7 +29,7 @@
     :G915 {:key :caps_lock}
 }
 :devices {
-  :G915 [{:vendor_id 1133, :product_id 49982}]
+  :G915 [{:vendor_id 1133, :product_id 49982}, {:vendor_id 1133, :product_id 45908 }]
 }
 :main [
     ;; vi mode with d key

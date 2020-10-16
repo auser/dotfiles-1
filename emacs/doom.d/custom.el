@@ -307,10 +307,14 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    '("76bfa9318742342233d8b0b42e824130b3a50dcc732866ff8e47366aed69de11" "990e24b406787568c592db2b853aa65ecc2dcd08146c0d22293259d400174e37" "be9645aaa8c11f76a10bcf36aaf83f54f4587ced1b9b679b55639c87404e2499" "cf3d5d77679f7daed6a2c863e4f2e30427d5e375b254252127be9359957502ec" "4bca89c1004e24981c840d3a32755bf859a6910c65b829d9441814000cf6c3d0" default))
- '(package-selected-packages '(ox-pandoc tide xah-css-mode emmet-mode)))
+ '(org-todo-keywords
+   '((sequence "TODO(t)" "PROJ(p)" "STRT(s)" "WAIT(w)" "HOLD(h)" "|" "DONE(d)" "KILL(k)" "INPROGRESS(i)" "TOREAD(r)")
+     (sequence "[ ](T)" "[-](S)" "[?](W)" "|" "[X](D)")))
+ '(package-selected-packages
+   '(dockerfile-mode docker jetbrains-darcula-theme impatient-mode ox-pandoc tide xah-css-mode emmet-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(whitespace-tab ((t (:foreground "#636363")))))

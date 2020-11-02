@@ -4,7 +4,7 @@
   "breadcrumbs.enabled": true,
   // editor
   "editor.renderLineHighlight": "line",
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 0,
   "go.formatTool": "goimports",
   "go.useLanguageServer": true,
   "editor.tabSize": 2,
@@ -39,5 +39,6 @@
   "python.languageServer": "Microsoft",
   "python.dataScience.alwaysTrustNotebooks": true,
   "css.validate": false,
-  "tailwindCSS.emmetCompletions": true
+  "tailwindCSS.emmetCompletions": true,
+  "kite.showWelcomeNotificationOnStartup": false
 }

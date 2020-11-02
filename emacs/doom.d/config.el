@@ -98,10 +98,20 @@
   (tide-hl-identifier-mode +1)
   (company-mode +1))
 
+(defun setup-go-mode ()
+  (interactive)
+  (lsp-mode t)
+  (flycheck-mode t)
+  (gofmt-before-save t)
+  (company-lsp t)
+  (lsp-ui-mode t)
+  )
+
 (setq company-tooltip-align-annotations t)
 
 (add-hook 'before-save-hook 'tide-format-before-save)
 (add-hook 'typescript-mode-hook #'setup-tide-mode)
+(add-hook 'go-mode-hook #'setup-go-mode)
 
 (after! evil-surround
   (let ((pairs '((?g "$" . "$")

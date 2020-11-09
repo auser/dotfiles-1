@@ -1,3 +1,4 @@
+-- require("hyper")
 require("reload")
 require("meta")
 require("test")

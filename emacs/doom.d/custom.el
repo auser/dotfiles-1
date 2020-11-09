@@ -311,7 +311,7 @@
    '((sequence "TODO(t)" "PROJ(p)" "STRT(s)" "WAIT(w)" "HOLD(h)" "|" "DONE(d)" "KILL(k)" "INPROGRESS(i)" "TOREAD(r)")
      (sequence "[ ](T)" "[-](S)" "[?](W)" "|" "[X](D)")))
  '(package-selected-packages
-   '(lsp-mode dockerfile-mode docker jetbrains-darcula-theme impatient-mode ox-pandoc tide xah-css-mode emmet-mode)))
+   '(cider lsp-mode dockerfile-mode docker jetbrains-darcula-theme impatient-mode ox-pandoc tide xah-css-mode emmet-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

@@ -115,7 +115,7 @@
     # antibody
     ~/.antibody: config/antibody.txt
     # Hammerspoon
-    ~/.hammerspoon: hammerspoon
+    #~/.hammerspoon: hammerspoon
     # Doing
     ~/.doingrc: config/doing.yml
     # hyper.js

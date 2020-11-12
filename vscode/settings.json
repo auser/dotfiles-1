@@ -4,7 +4,7 @@
   "breadcrumbs.enabled": true,
   // editor
   "editor.renderLineHighlight": "line",
-  "window.zoomLevel": -1,
+  "window.zoomLevel": 1,
   "go.formatTool": "goimports",
   "go.useLanguageServer": true,
   "editor.tabSize": 2,

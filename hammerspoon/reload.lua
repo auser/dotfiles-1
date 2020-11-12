@@ -1,3 +1,10 @@
+local hyper = {"ctrl", "alt", "cmd"}
+
+local function reload_config()
+  hs.reload()
+    hs.alert.show("Config Reloaded")
+end
+
 function reloadConfig(files)
     local doReload = false
     for _, file in pairs(files) do
@@ -6,10 +13,11 @@ function reloadConfig(files)
         end
     end
     if doReload then
-        hs.reload()
-        hs.alert.show("Config Reloaded")
+        -- hs.reload()
+        reload_config()
     end
 end
+
 
 hs.pathwatcher.new(os.getenv("HOME") .. "/.hammerspoon/", reloadConfig):start()
 hs.alert.show("Config loaded")

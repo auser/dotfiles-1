@@ -71,3 +71,9 @@
 (package! py-autopep8)
 (package! docker)
 (package! dockerfile-mode)
+
+(package! company)
+(package! company-racer)
+(package! racer)
+(package! flycheck)
+(package! flycheck-rust)

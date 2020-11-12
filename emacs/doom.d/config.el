@@ -107,11 +107,23 @@
   (lsp-ui-mode t)
   )
 
+(defun setup-rust-mode ()
+  (interactive)
+  (push 'rustic-clippy flycheck-checkers)
+  (setq rustic-lsp-server 'rls)
+
+  ;; faces
+  (custom-set-faces
+  '(rustic-compilation-column ((t (:inherit compilation-column-number))))
+  '(rustic-compilation-line ((t (:foreground "LimeGreen")))))
+  )
+
 (setq company-tooltip-align-annotations t)
 
 (add-hook 'before-save-hook 'tide-format-before-save)
 (add-hook 'typescript-mode-hook #'setup-tide-mode)
 (add-hook 'go-mode-hook #'setup-go-mode)
+(add-hook 'rust-mode-hook #'setup-rust-mode)
 
 (after! evil-surround
   (let ((pairs '((?g "$" . "$")

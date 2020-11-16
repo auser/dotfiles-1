@@ -16,7 +16,7 @@ spoon.MiroWindowsManager:bindHotkeys({
   right = {hyper, "right"},
   down = {hyper, "down"},
   left = {hyper, "left"},
-  fullscreen = {hyper, "f"}
+  fullscreen = {hyper, "c"}
 })
 
 -- reload

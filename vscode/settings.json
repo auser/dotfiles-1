@@ -36,9 +36,12 @@
   },
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "python.languageServer": "Microsoft",
-  "python.dataScience.alwaysTrustNotebooks": true,
+"python.languageServer": "Microsoft",
   "css.validate": false,
   "tailwindCSS.emmetCompletions": true,
-  "kite.showWelcomeNotificationOnStartup": false
+"kite.showWelcomeNotificationOnStartup": false,
+"jupyter.alwaysTrustNotebooks": true,
+"vs-kubernetes": {
+  "vs-kubernetes.minikube-path.mac": "/Users/alerner/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
+}
 }

@@ -77,3 +77,5 @@
 (package! racer)
 (package! flycheck)
 (package! flycheck-rust)
+
+(package! ox-hugo)

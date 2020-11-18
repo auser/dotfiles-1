@@ -27,7 +27,7 @@
     :caps_lock-mode {:key :caps_lock}
 }
 :devices {
-  :G915 [{:vendor_id 1133, :product_id 49982}, {:vendor_id 1133, :product_id 45908}]
+  :G915 [{:vendor_id 1133, :product_id 49982}]
   :macbook_internal [{:product_id 1452 :vendor_id 631}]
 }
 :main [
@@ -59,25 +59,25 @@
       :rules [:G915
       [:caps_lock :left_control]]}
 -
-    ; {:des "G915"
-      ; :rules [:G915
-        ; [:##left_option :##left_command]
-        ; [:##left_command :##left_option]
-        ; [:caps_lock :##left_control]
-        ; [:f1 :display_brightness_decrement]
-        ; [:f2 :display_brightness_increment]
-        ; [:f3 :mission_control]
-        ; [:f4 :launchpad]
-        ; [:f5 :illumination_decrement]
-        ; [:f6 :illumination_increment]
-        ; [:f7 :rewind]
-        ; [:f8 :vk_consumer_play]
-        ; [:f9 :vk_consumer_next]
-        ; [:f10 :mute]
-        ; [:f11 :volume_decrement]
-        ; [:f12 :volume_increment]
-      ; ]
-    ; }
+    {:des "G915"
+      :rules [:G915
+        [:##left_option :##left_command]
+        [:##left_command :##left_option]
+        [:caps_lock :##left_control]
+        [:f1 :display_brightness_decrement]
+        [:f2 :display_brightness_increment]
+        [:f3 :mission_control]
+        [:f4 :launchpad]
+        [:f5 :illumination_decrement]
+        [:f6 :illumination_increment]
+        [:f7 :rewind]
+        [:f8 :vk_consumer_play]
+        [:f9 :vk_consumer_next]
+        [:f10 :mute]
+        [:f11 :volume_decrement]
+        [:f12 :volume_increment]
+      ]
+    }
 
     {:des "Caps mode",
          :rules [:caps_lock-mode

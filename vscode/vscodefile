@@ -1,9 +1,8 @@
-jamesbirtles.svelte-vscode
-ardenivanov.svelte
+svelte.svelte-vscode
 yzhang.markdown-all-in-one
 kevinkyang.auto-comment-blocks
 ms-python.python
-ms-vscode.Go
+golang.Go
 necinc.elmmet
 steoates.autoimport
 rust-lang.rust
@@ -16,3 +15,6 @@ eamodio.gitlens
 esbenp.prettier-vscode
 akamud.vscode-theme-onedark
 akamud.vscode-theme-onelight
+ms-dotnettools.csharp
+ms-toolsai.jupyter
+dart-code.dart-code

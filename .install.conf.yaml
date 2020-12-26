@@ -9,20 +9,10 @@
 - clean: ["~"]
 
 # Run shell commands
-- shell:
+# - shell:
     # Install submodules
-    - [git submodule update --init --recursive, Installing submodules]
+    # - [git submodule update --init --recursive, Installing submodules]
 
-# TODO: add specific shell block to install tools (not sure how)
-#- shell:
-# TODO: delete! probably dont need it
-#- npm config set prefix '~/.npm-global'
-# TODO: Automate filling in the list
-# TODO: Install go tools
-#- go get -u github.com/m3ng9i/ran
-# TODO: Install rust
-# TODO: Install npm global tools
-#- npm install -g @fabiospampinato/bump
 - go:
     - github.com/delicb/cliware
 
@@ -113,7 +103,9 @@
     # antibody
     ~/.antibody: config/antibody.txt
     # Hammerspoon
-    ~/.hammerspoon: hammerspoon
+    ~/.hammerspoon:
+      create: true
+      path: hammerspoon
     # Doing
     ~/.doingrc: config/doing.yml
     # hyper.js

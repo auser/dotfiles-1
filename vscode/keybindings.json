@@ -1,16 +1,16 @@
 [
-    {
-        "key": "alt+left",
-        "command": "workbench.action.navigateBack"
-    },
+    // {
+    //     "key": "alt+left",
+    //     "command": "workbench.action.navigateBack"
+    // },
     {
         "key": "ctrl+-",
         "command": "-workbench.action.navigateBack"
     },
-    {
-        "key": "alt+right",
-        "command": "workbench.action.navigateForward"
-    },
+    // {
+    //     "key": "alt+right",
+    //     "command": "workbench.action.navigateForward"
+    // },
     {
         "key": "ctrl+shift+-",
         "command": "-workbench.action.navigateForward"
@@ -56,21 +56,21 @@
         "command": "cursorWordStartLeft",
         "when": "textInputFocus"
     },
-    {
-        "key": "alt+left",
-        "command": "-cursorWordStartLeft",
-        "when": "textInputFocus"
-    },
+    // {
+    //     "key": "alt+left",
+    //     "command": "-cursorWordStartLeft",
+    //     "when": "textInputFocus"
+    // },
     {
         "key": "shift+alt+right",
         "command": "cursorWordEndRight",
         "when": "textInputFocus"
     },
-    {
-        "key": "alt+right",
-        "command": "-cursorWordEndRight",
-        "when": "textInputFocus"
-    },
+    // {
+    //     "key": "alt+right",
+    //     "command": "-cursorWordEndRight",
+    //     "when": "textInputFocus"
+    // },
     {
         "key": "shift+alt+left",
         "command": "-cursorWordStartLeftSelect",

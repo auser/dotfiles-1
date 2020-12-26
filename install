@@ -10,8 +10,8 @@ DOTBOT_DIR="$VENDOR_DIR/dotbot"
 DOTBOT_BIN="bin/dotbot"
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-cd "${BASEDIR}"
-git submodule update --init --recursive .
+# cd "${BASEDIR}"
+# git submodule update --init --recursive .
 
 if [ ! -f ${BASEDIR}/hammerspoon/Spoons/Lunette.spoon ]; then
     if [ ! -d ${BASEDIR}/hammerspoon/Spoons/Lunette/Lunette.spoon ]; then

@@ -101,7 +101,7 @@
 
   "python.showStartPage": false,
   "python.formatting.provider": "none",
-  "python.pythonPath": "${workspaceFolder}/.venv/bin/python3",
+  "python.pythonPath": "/usr/local/bin/python3",
   "python.terminal.activateEnvironment": true,
   "python.workspaceSymbols.enabled": false,
   "python.linting.enabled": false,

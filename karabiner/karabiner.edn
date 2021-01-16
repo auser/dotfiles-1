@@ -18,7 +18,6 @@
 ;; R  | right_shift
 ;; !! | mandatory command + control + optional + shift (hyper)
 ;; ## | optional any
-{
 :templates {
     :launch "open -a '%s.app'"
     :alfred "osascript -e 'tell application \"Alfred 4\" to run trigger \"%s\" in workflow \"%s\" with argument \"\"'"
@@ -26,6 +25,11 @@
 :simlayers {
     :vi-mode {:key :d}
     :caps_lock-mode {:key :caps_lock}
+}
+:devices {
+  :G915 [{:vendor_id 1133, :product_id 49982}]
+  :macbook_internal [{:product_id 1452 :vendor_id 631}]
+  :mxkeys [{:product_id 1133 :vendor_id 45915}]
 }
 :main [
     ;; vi mode with d key
@@ -38,8 +42,41 @@
         [:##b :!Oleft_arrow]
         [:##w :!Oright_arrow]
         [:##a :!Ca]; highlight all
-        [:##e :!Te]; go to end of line via ctrl-e
+        [:##e :!Te]; go to end of line vKia ctrl-e
         [:##f :return_or_enter]
+      ]
+    }
+    
+    ; description with fancy external keyboard
+    {:des "MX Keys change left alt to left command"
+        :rules [:mxkeys
+          [:left_command :left_option]
+          [:left_option :left_command]
+          [:right_command :right_option]
+          [:right_option :right_command]
+        ]}
+
+    {:des "Change caps lock to control"
+      :rules [:mxkeys
+      [:caps_lock :left_control]]}
+-
+    {:des "mxkeys"
+      :rules [:mxkeys
+        [:##left_option :##left_command]
+        [:##left_command :##left_option]
+        [:caps_lock :##left_control]
+        [:f1 :display_brightness_decrement]
+        [:f2 :display_brightness_increment]
+        [:f3 :mission_control]
+        [:f4 :launchpad]
+        [:f5 :illumination_decrement]
+        [:f6 :illumination_increment]
+        [:f7 :rewind]
+        [:f8 :vk_consumer_play]
+        [:f9 :vk_consumer_next]
+        [:f10 :mute]
+        [:f11 :volume_decrement]
+        [:f12 :volume_increment]
       ]
     }
 
@@ -89,4 +126,3 @@
                  [:9 :!TO9]
                  [:0 :!TO0]]}
 ]
-}

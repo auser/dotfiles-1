@@ -81,6 +81,9 @@
     ~/.zshrc.d:
       create: true
       path: zsh/
+    ~/.config/karabiner.edn: 
+      create: true
+      path: karabiner/karabiner.edn
     ~/.asdf: asdf
     ~/.zlogin: zsh/zlogin
     ~/.zshenv: zsh/zshenv

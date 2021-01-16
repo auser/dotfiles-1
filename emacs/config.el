@@ -3,6 +3,25 @@
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
+;; patch to emacs@28.0.50
+;; https://www.reddit.com/r/emacs/comments/kqd9wi/changes_in_emacshead2828050_break_many_packages/
+(defmacro define-obsolete-function-alias ( obsolete-name current-name
+                                           &optional when docstring)
+  "Set OBSOLETE-NAME's function definition to CURRENT-NAME and mark it obsolete.
+\(define-obsolete-function-alias \\='old-fun \\='new-fun \"22.1\" \"old-fun's doc.\")
+is equivalent to the following two lines of code:
+\(defalias \\='old-fun \\='new-fun \"old-fun's doc.\")
+\(make-obsolete \\='old-fun \\='new-fun \"22.1\")
+WHEN should be a string indicating when the function was first
+made obsolete, for example a date or a release number.
+See the docstrings of `defalias' and `make-obsolete' for more details."
+  (declare (doc-string 4)
+           (advertised-calling-convention
+           ;; New code should always provide the `when' argument
+           (obsolete-name current-name when &optional docstring) "23.1"))
+  `(progn
+     (defalias ,obsolete-name ,current-name ,docstring)
+     (make-obsolete ,obsolete-name ,current-name ,when)))
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
@@ -21,21 +40,33 @@
 ;; font string. You generally only need these two:
 ;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
+;;
+;;
+;; Change Mac modifiers
+;; (cond (IS-MAC
+;;        (setq mac-command-modifier 'meta
+;;              mac-option-modifier 'alt
+;;              mac-right-option-modifier 'alt)))
+
+;; Remove the whole line instead of just emptying it
+(setq kill-whole-line t)
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
-;; available. You can either set `doom-theme' or manually load a theme with the
-;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one)
 
-;; If you use `org' and don't want your org files in the default location below,
-;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/.org/")
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
 
 
+;; Enable auto-save and backup files
+(setq auto-save-default t
+      make-backup-files t)
+
+;; Disable exit confirmation
+(setq confirm-kill-emacs nil)
+
+;;
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
 ;; - `load!' for loading external *.el files relative to this one
@@ -51,66 +82,10 @@
 ;; This will open documentation for it, including demos of how they are used.
 ;;
 
-(use-package! org-roam
-  :commands (org-roam-insert org-roam-find-file org-roam)
-  :init
-  (setq org-roam-directory "~/.org/roam")
-  (map! :leader
-        :prefix "n"
-        :desc "Org-Roam-Insert" "i" #'org-roam-insert
-        :desc "Org-Roam-Find" "/" #'org-roam-find-file
-        :desc "Org-Roam-Buffer" "r" #'org-roam)
-  :config
-  (org-roam-mode +1))
+;; See recently opened files
+;; (map! "C-x b"   #'counsel-buffer-or-recentf
+;;       "C-x C-b" #'counsel-switch-buffer)
 
-;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
-;; they are implemented.
-;; (after! smartparens
-;;   (defun zz/goto-match-paren (arg)
-;;     "Go to the matching paren/bracket, otherwise (or if ARG is not
-;;     nil) insert %.  vi style of % jumping to matching brace."
-;;     (interactive "p")
-;;     (if (not (memq last-command '(set-mark
-;;                                   cua-set-mark
-;;                                   zz/goto-match-paren
-;;                                   down-list
-;;                                   up-list
-;;                                   end-of-defun
-;;                                   beginning-of-defun
-;;                                   backward-sexp
-;;                                   forward-sexp
-;;                                   backward-up-list
-;;                                   forward-paragraph
-;;                                   backward-paragraph
-;;                                   end-of-buffer
-;;                                   beginning-of-buffer
-;;                                   backward-word
-;;                                   forward-word
-;;                                   mwheel-scroll
-;;                                   backward-word
-;;                                   forward-word
-;;                                   mouse-start-secondary
-;;                                   mouse-yank-secondary
-;;                                   mouse-secondary-save-then-kill
-;;                                   move-end-of-line
-;;                                   move-beginning-of-line
-;;                                   backward-char
-;;                                   forward-char
-;;                                   scroll-up
-;;                                   scroll-down
-;;                                   scroll-left
-;;                                   scroll-right
-;;                                   mouse-set-point
-;;                                   next-buffer
-;;                                   previous-buffer
-;;                                   previous-line
-;;                                   next-line
-;;                                   back-to-indentation
-;;                                   doom/backward-to-bol-or-indent
-;;                                   doom/forward-to-last-non-comment-or-eol
-;;                                   )))
-;;         (self-insert-command (or arg 1))
-;;       (cond ((looking-at "\\s\(") (sp-forward-sexp) (backward-char 1))
-;;             ((looking-at "\\s\)") (forward-char 1) (sp-backward-sexp))
-;;             (t (self-insert-command (or arg 1))))))
-;;   (map! "%" 'zz/goto-match-paren))
+
+(load! "+ui")
+(load! "+org")

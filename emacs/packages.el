@@ -49,12 +49,34 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
-(use-package deft
-  :after org
-  :bind
-  ("C-c n d" . deft)
-  :custom
-  (deft-recursive t)
-  (deft-use-filter-string-for-filename t)
-  (deft-default-extension "org")
-  (deft-directory "~/.org/roam"))
+(package! spacemacs-theme)
+(package! jupyter)
+(package! deft)
+
+;; Web stuff
+(package! jinja2-mode)
+(package! ahk-mode)
+(package! ng2-mode)
+
+;; Fuzzy file matching
+(package! flx-ido)
+
+;; List and filter filers in git repo
+(package! helm-ls-git)
+
+;; Code nav
+(package! lsp-ui)
+
+;; Code nav
+;; (package! org-journal)
+;; (package! org-download)
+
+;; (use-package deft
+;;   :after org
+;;   :bind
+;;   ("C-c n d" . deft)
+;;   :custom
+;;   (deft-recursive t)
+;;   (deft-use-filter-string-for-filename t)
+;;   (deft-default-extension "org")
+;;   (deft-directory "~/.org/roam"))

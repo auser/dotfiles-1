@@ -80,7 +80,8 @@
       path: zsh/zshrc.zsh
     ~/.zshrc.d:
       create: true
-      path: zsh/
+      path: zsh
+      recursive: true
     ~/.zlogin: zsh/zlogin
     ~/.zshenv: zsh/zshenv
     ~/.zshkeys: zsh/zshkeys

@@ -17,9 +17,7 @@ brew "argocd"
 brew "black"
 brew "docker-machine-driver-vmware"
 brew "docker-machine"
-brew "fish"
 brew "git"
-brew "go"
 brew "grc"
 brew "helm"
 brew "httpie"
@@ -41,6 +39,7 @@ brew "wget"
 brew "wrk"
 brew "yamllint"
 brew "yarn"
+brew "candid82/brew/joker"
 
 # Homebrew Casks
 cask "arq"
@@ -73,6 +72,11 @@ cask "sequential"
 cask "slack"
 cask "spotify"
 cask "transmit"
+cask "font-fira-code"
+cask "font-roboto-mono"
+cask "font-roboto-mono-for-powerline"
+cask "hyper"
+cask "postman"
 cask "visual-studio-code"
 
 # macOS App Store
@@ -87,3 +91,4 @@ mas "Amphetamine", id: 937984704
 mas "Parcel", id: 639968404
 mas "Reeder", id: 880001334
 mas "Things", id: 904280696
+mas "Telegram", id: 747648890

@@ -1,33 +1,22 @@
-BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+export NIX_IGNORE_SYMLINK_STORE=1
+source ~/.zsh_plugins.sh # Load zsh plugins
 
-source $HOME/.zsh_plugins.sh # Load zsh plugins
+source ~/.dotfiles/zsh/env.zsh
 
-source ${BASEDIR}/zsh/env.zsh
-
-#######################################################################
-# history
-#######################################################################
-
-HISTFILE=${BASEDIR}/.zsh_history
-HISTSIZE=1000
-SAVEHIST=1000
-
-#######################################################################
-# key bindings
-#######################################################################
-
-bindkey -e
-
-if [ -f ${BASEDIR}/.zshkeys ]; then
-    source ${BASEDIR}/.zshkeys
-fi
-
-
-source ${BASEDIR}/zsh/options.zsh
-source ${BASEDIR}/zsh/functions/functions.zsh
-source ${BASEDIR}/zsh/functions/fzf-functions.zsh
-source ${BASEDIR}/zsh/functions/git-functions.zsh
-source ${BASEDIR}/zsh/bindings.zsh
-source ${BASEDIR}/zsh/alias.zsh
+source ~/.dotfiles/zsh/options.zsh
+source ~/.dotfiles/zsh/functions/functions.zsh
+source ~/.dotfiles/zsh/functions/fzf-functions.zsh
+source ~/.dotfiles/zsh/functions/git-functions.zsh
+source ~/.dotfiles/zsh/bindings.zsh
+source ~/.dotfiles/zsh/alias.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+if [ -n "$(/bin/ls ~/.zshrc.d)" ]; then
+  for dotfile in ~/.zshrc.d/features/*.zsh
+  do
+    if [ -r "${dotfile}" ]; then
+      source "${dotfile}"
+    fi
+  done
+fi

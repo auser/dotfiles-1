@@ -72,7 +72,7 @@ alias aa='exa -la' # See hidden files
 alias wg='wget -r --no-parent'
 alias v='mv'
 alias os='osascript'
-alias lt='ls -lart'
+# alias lt='ls -lart'
 # alias aa='ls -lahFG'
 # alias aa='exa -lahF'
 alias tp='type'
@@ -302,3 +302,8 @@ alias gdn='git diff --name-only'
 alias gs='git status --short'
 alias gss='git show --word-diff=color' # See changes made
 
+# Emacs
+alias emacs="open /Applications/Emacs.app $@"
+
+# Ruby
+alias be="bundle exec"

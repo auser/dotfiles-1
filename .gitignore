@@ -5,3 +5,13 @@
 /sublime/Package Control.merged-ca-bundle
 /sublime/Package Control.user-ca-bundle
 /sublime/Package Control.last-run
+hammerspoon/Spoons/
+emacs/spacemacs/
+.history
+node_modules/
+yarn.lock
+asdf
+vendor
+emacs/spacemacs
+hammerspoon/Spoons/miro-windows-manager
+asdf

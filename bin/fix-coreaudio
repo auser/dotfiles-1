@@ -1,0 +1,5 @@
+#!/bin/bash
+sudo killall coreaudiod
+killall -u alerner cfprefsd
+sudo nvram -c
+sudo launchctl start com.apple.audio.coreaudiod

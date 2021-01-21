@@ -7,6 +7,7 @@
 [submodule "vendor/dotbot-vscode"]
 	path = vendor/dotbot-vscode
 	url = https://github.com/hujianxin/dotbot-vscode.git
+	ignore = dirty
 [submodule "vendor/dotbot-asdf"]
 	path = vendor/dotbot-asdf
 	url = https://github.com/sobolevn/dotbot-asdf.git
@@ -16,3 +17,18 @@
 [submodule "vendor/dotbot-brewfile"]
 	path = vendor/dotbot-brewfile
 	url = https://github.com/sobolevn/dotbot-brewfile.git
+[submodule "hammerspoon/Spoons/miro-windows-manager"]
+	path = hammerspoon/Spoons/miro-windows-manager
+	url = https://github.com/miromannino/miro-windows-manager.git
+	ignore = dirty
+[submodule "hammerspoon/Spoons/Lunette"]
+	path = hammerspoon/Spoons/Lunette
+	url = https://github.com/scottwhudson/Lunette.git
+	ignore = dirty
+[submodule "emacs/spacemacs"]
+	path = emacs/spacemacs
+	url = https://github.com/syl20bnr/spacemacs.git
+	ignore = dirty
+[submodule "asdf"]
+	path = asdf
+	url = https://github.com/asdf-vm/asdf.git

@@ -13,11 +13,11 @@ BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "${BASEDIR}"
 git submodule update --init --recursive .
 
-if [ ! -f ${BASEDIR}/hammerspoon/Spoons/Lunette.spoon ]; then
-    if [ ! -d ${BASEDIR}/hammerspoon/Spoons/Lunette/Lunette.spoon ]; then
-        /bin/echo "A" | unzip -qq ${BASEDIR}/hammerspoon/Spoons/Lunette/Spoons/Lunette.spoon.zip -d ${BASEDIR}/hammerspoon/Spoons
-    fi
-fi
+# if [ ! -f ${BASEDIR}/hammerspoon/Spoons/Lunette.spoon ]; then
+#     if [ ! -d ${BASEDIR}/hammerspoon/Spoons/Lunette/Lunette.spoon ]; then
+#         /bin/echo "A" | unzip -qq ${BASEDIR}/hammerspoon/Spoons/Lunette/Spoons/Lunette.spoon.zip -d ${BASEDIR}/hammerspoon/Spoons
+#     fi
+# fi
 
 if [ ! -f ${BASEDIR}/hammerspoon/Spoons/miro-windows-manager/MiroWindowsManager.spoon ]; then
     ln -sf ${BASEDIR}/hammerspoon/Spoons/miro-windows-manager/MiroWindowsManager.spoon ${BASEDIR}/hammerspoon/Spoons/MiroWindowsManager.spoon

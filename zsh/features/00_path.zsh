@@ -2,12 +2,11 @@
 # path, the 0 in the filename causes this to load first
 
 # Base PATH
-PATH=/usr/local/sbin:/sbin:/usr/sbin:/bin:/usr/bin:./node_modules/bin:./node_modules/.bin:./bin
+PATH=/usr/local/bin:/usr/local/sbin:/sbin:/usr/sbin:/bin:/usr/bin:./node_modules/bin:./bin
 
 
 # Conditional PATH additions
 for path_candidate in /opt/local/sbin \
-  ~/.toolbox/bin \
   /Applications/Xcode.app/Contents/Developer/usr/bin \
   /opt/local/bin \
   /usr/local/share/npm/bin \
@@ -16,13 +15,10 @@ for path_candidate in /opt/local/sbin \
   ~/.rbenv/bin \
   ~/.node/bin \
   ~/.kiex/bin \
-  ~/.asdf/bin \
   $HOME/go/bin \
   /usr/local/bin/ \
   $HOME/.dotfiles/bin \
   $HOME/bin \
-  $HOME/.bin \
-  /usr/local/bin \
   $HOME/src/gocode/bin \
   /Applications/Postgres.app/Contents/Versions/9.4/bin
 do

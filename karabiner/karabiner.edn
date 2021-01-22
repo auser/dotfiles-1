@@ -1,128 +1,96 @@
-;; this is a little bit weird, but it's convenient
-;; the rule [:!Ca :!T1]
-;; means from command a to control 1
-;; :!Ca is keycode :a and prefix a with !C
-
-;; here's the definition
-
-;; !  | means mandatory
-;; #  | means optional
-;; C  | left_command
-;; T  | left_control
-;; O  | left_option
-;; S  | left_shift
-;; F  | fn
-;; Q  | right_command
-;; W  | right_control
-;; E  | right_option
-;; R  | right_shift
-;; !! | mandatory command + control + optional + shift (hyper)
-;; ## | optional any
-:templates {
-    :launch "open -a '%s.app'"
-    :alfred "osascript -e 'tell application \"Alfred 4\" to run trigger \"%s\" in workflow \"%s\" with argument \"\"'"
-}
-:simlayers {
-    :vi-mode {:key :d}
-    :caps_lock-mode {:key :caps_lock}
-}
-:devices {
-  :G915 [{:vendor_id 1133, :product_id 49982}]
-  :macbook_internal [{:product_id 1452 :vendor_id 631}]
-  :mxkeys [{:product_id 1133 :vendor_id 45915}]
-}
-:main [
-    ;; vi mode with d key
-    {:des "Vi Mode [D as Trigger Key]"
-      :rules [:vi-mode
-        [:##j :down_arrow]
-        [:##k :up_arrow]
-        [:##h :left_arrow]
-        [:##l :right_arrow]
-        [:##b :!Oleft_arrow]
-        [:##w :!Oright_arrow]
-        [:##a :!Ca]; highlight all
-        [:##e :!Te]; go to end of line vKia ctrl-e
-        [:##f :return_or_enter]
-      ]
-    }
-    
-    ; description with fancy external keyboard
-    {:des "MX Keys change left alt to left command"
-        :rules [:mxkeys
-          [:left_command :left_option]
-          [:left_option :left_command]
-          [:right_command :right_option]
-          [:right_option :right_command]
-        ]}
-
-    {:des "Change caps lock to control"
-      :rules [:mxkeys
-      [:caps_lock :left_control]]}
--
-    {:des "mxkeys"
-      :rules [:mxkeys
-        [:##left_option :##left_command]
-        [:##left_command :##left_option]
-        [:caps_lock :##left_control]
-        [:f1 :display_brightness_decrement]
-        [:f2 :display_brightness_increment]
-        [:f3 :mission_control]
-        [:f4 :launchpad]
-        [:f5 :illumination_decrement]
-        [:f6 :illumination_increment]
-        [:f7 :rewind]
-        [:f8 :vk_consumer_play]
-        [:f9 :vk_consumer_next]
-        [:f10 :mute]
-        [:f11 :volume_decrement]
-        [:f12 :volume_increment]
-      ]
-    }
-
-    {:des "Caps mode",
-         :rules [:caps_lock-mode
-                 [:open_bracket :!TOopen_bracket]
-                 [:close_bracket :!TOclose_bracket]
-                 [:semicolon :!TOsemicolon]
-                 [:quote :!TOquote]
-                 [:comma :!TOcomma]
-                 [:period :!TOperiod]
-                 [:slash :!TOslash]
-                 [:a :!Ta]; ctrl-a start of line
-                 [:b :!TOb]
-                 [:c :!TOc]
-                 [:d :!TOd]
-                 [:e :!Te]; ctrl-e end of line
-                 [:f :!TOf]
-                 [:g :!TOg]
-                 [:h :!TOh]
-                 [:i :!TOi]
-                 [:j :!TOj]
-                 [:k :!TOk]
-                 [:l :!TOl]
-                 [:m :!TOm]
-                 [:n :!TOn]
-                 [:o :!TOo]
-                 [:p :!TOp]
-                 [:q :!TOq]
-                 [:r :!Tr]; redo in vi
-                 [:s :!TOs]
-                 [:t :!TOt]
-                 [:u :!TOu]
-                 [:v :!TOv]
-                 [:w :!TOw]
-                 [:x :!TOx]
-                 [:y :!TOy]
-                 [:z :!TOz]
-                 [:1 :!TO1]
-                 [:2 :!TO2]
-                 [:3 :!TO3]
-                 [:4 :!TO4]
-                 [:5 :!TO5]
-                 [:6 :!TO6]
-                 [:7 :!TO7]
-                 [:8 :!TO8]
-                 [:9 :!TO9]
-                 [:0 :!TO0]]}
-]
+{:profiles
+ {:JS {:default true
+         :sim     50
+         :delay   500
+         :alone   500
+         :held    500}}
+ :templates {:alfred "osascript -e 'tell application \"Alfred 4\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
+             :km "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"%s\"'"}
+ :simlayers {:semicolon-mode {:key :semicolon}
+             :1-mode {:key :1}
+             :2-mode {:key :2}
+             :3-mode {:key :3}
+             :4-mode {:key :4}
+             :q-mode {:key :q}
+             :w-mode {:key :w}
+             :e-mode {:key :e}
+             :r-mode {:key :r}
+             :t-mode {:key :t}
+             :i-mode {:key :i}
+             :o-mode {:key :o}
+             :a-mode {:key :a}
+             :s-mode {:key :s}
+             :d-mode {:key :d}
+             :f-mode {:key :f}
+             :g-mode {:key :g}
+             :z-mode {:key :z}
+             :x-mode {:key :x}
+             :c-mode {:key :c}
+             :v-mode {:key :v}
+             :b-mode {:key :b}
+             :n-mode {:key :n}
+             :m-mode {:key :m}
+             :spacebar-mode {:key :spacebar}
+             :tilde-mode {:key :grave_accent_and_tilde}
+             :jsdot-mode {:key :period}
+             ;:godot-mode {:key :period}
+             ;:pydot-mode {:key :period}
+             :caps-mode {:key :caps_lock}}
+        {:des "xkey (spotify)"
+         :rules [:x-mode
+                 [:o [:km "Share current song on Twitter"]]
+                 [:i [:km "Repeat Spotify song"]]
+                 [:h [:km "Play Top song"]]
+                 [:p [:km "Paste current Spotify song link"]]
+                 [:l [:alfred "spot_mini" "com.vdesabou.spotify.mini.player"]]
+                 [:v [:alfred "show_alfred_playlist" "com.vdesabou.spotify.mini.player"]]
+                 [:j [:alfred "song_radio" "com.vdesabou.spotify.mini.player"]]
+                 [:u [:alfred "artist_radio" "com.vdesabou.spotify.mini.player"]]
+                 [:k [:alfred "show_current_track" "com.vdesabou.spotify.mini.player"]]
+                 [:period [:alfred "youtube_search_current_track" "com.vdesabou.spotify.mini.player"]]
+                 [:comma [:alfred "reddit_search_current_track" "com.vdesabou.spotify.mini.player"]]
+                 [:m [:alfred "add_current_track_to" "com.vdesabou.spotify.mini.player"]]
+                 [:n [:alfred "show_playlists" "com.vdesabou.spotify.mini.player"]]
+                 [:semicolon [:alfred "add_current_track_to_alfred_playlist_or_your_music" "com.vdesabou.spotify.mini.player"]]
+                 [:b [:alfred "remove_current_track_from" "com.vdesabou.spotify.mini.player"]]]}
+        {:des "capskey (todo + trello)"
+         :rules [:caps-mode
+                 [:1 [:alfred "Screenshot -> Imgur" "com.vitorgalvao.alfred.webscreenshot"]]
+                 [:2 :!TO2] ; Screenshot -> Clipboard
+                 [:3 :!TO3] ; Screenshot -> Annotate
+                 [:4 :!TO4] ; Show Annotate
+                 [:9 :!TO9] ; Picture of screen -> Clipboard
+                 [:0 :!TO0] ; Picture of screen -> ~/Desktop
+                 [:spacebar :!TO7] ; New Kap recording
+                 [:tab [:km "New ScreenFlow recording (options)"]]
+                 [:q :!CO5] ; Start/stop ScreenFlow recording
+                 [:f [:km "Open Focus Trello"]]
+                 [:l [:km "Open Learn Trello"]]
+                 [:z [:km "Open Music Trello"]]
+                 [:v [:km "Open Videos Trello"]]
+                 [:p [:km "Open Possessions Trello"]]
+                 [:s [:km "Open Research Papers Trello"]]
+                 [:u [:km "Open Courses Trello"]]
+                 [:n [:km "Open 2Do Clean"]]
+                 [:k [:km "Open 2Do Today"]]
+                 [:g [:km "Open 2Do Life"]]
+                 [:comma [:km "Open 2Do Macro"]]
+                 [:quote [:km "Open 2Do LA"]]
+                 [:slash [:km "Open 2Do Gyana"]]
+                 [:h [:km "Open 2Do Watch"]]
+                 [:b [:km "Open 2Do Blog"]]
+                 [:y [:km "Open 2Do Buy"]]
+                 [:d [:km "Open 2Do Find"]]
+                 [:t [:km "Open 2Do Talk"]]
+                 [:i [:km "Open 2Do Fix"]]
+                 [:m [:km "Open 2Do Later"]]
+                 [:semicolon [:km "Open 2Do Starred"]]
+                 [:period [:km "Search 2Do"]]
+                 [:open_bracket [:km "w: Goodreads (currently reading)"]]
+                 [:close_bracket [:km "w: Goodreads (next)"]]
+                 [:w [:km "Open Ideas Trello"]]
+                 [:e [:km "Open 2Do Read"]]
+                 [:c [:km "Open 2Do Check"]]
+                 [:o [:km "Open 2Do Tools"]]
+                 [:r [:km "Open 2Do PR"]]
+                 [:j [:km "todo: empty"]]]}]}

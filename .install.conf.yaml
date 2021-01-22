@@ -11,7 +11,7 @@
 # Run shell commands
 # - shell:
     # Install submodules
-    # - [git submodule update --init --recursive, Installing submodules]
+#    - [git submodule update --init --recursive, Installing submodules]
 
 - go:
     - github.com/delicb/cliware

@@ -49,6 +49,7 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
+(package! exec-path-from-shell)
 (package! spacemacs-theme)
 (package! jupyter)
 (package! deft)
@@ -66,6 +67,10 @@
 
 ;; Code nav
 (package! lsp-ui)
+
+;; hugo
+(package! hugo
+  :recipe (:host github :repo "aaronbieber/hugo.el"))
 
 ;; Code nav
 ;; (package! org-journal)

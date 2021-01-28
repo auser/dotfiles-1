@@ -77,7 +77,7 @@
   "window.menuBarVisibility": "hidden",
   "window.clickThroughInactive": false,
   "window.newWindowDimensions": "maximized",
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 2,
 
   "workbench.editor.labelFormat": "medium",
   "workbench.editor.tabCloseButton": "true",

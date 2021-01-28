@@ -86,6 +86,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
 ;; (map! "C-x b"   #'counsel-buffer-or-recentf
 ;;       "C-x C-b" #'counsel-switch-buffer)
 
-
 (load! "+ui")
 (load! "+org")
+(load! "+web")
+(load! "+rust")

@@ -3,7 +3,21 @@
 ;; ORG MODE
 ;; ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/.org/")
+(setq org-directory "~/Dropbox/Personal/Org/")
+(setq org-agenda-files '("~/Dropbox/Personal/Org/"))
+
+(setq org-agenda-custom-commands
+      '(("d" "Daily agenda and all TODOs"
+         ((tags "PRIORITY=\"A\""
+                ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
+                 (org-agenda-overriding-header "High-priority unfinished tasks:")))
+          (agenda "" ((org-agenda-ndays 1)))
+          (alltodo ""
+                   ((org-agenda-skip-function '(or (air-org-skip-subtree-if-habit)
+                                                   (air-org-skip-subtree-if-priority ?A)
+                                                   (org-agenda-skip-if nil '(scheduled deadline))))
+                    (org-agenda-overriding-header "ALL normal priority tasks:"))))
+         ((org-agenda-compact-blocks t)))))
 
 ;; Hide Org markup indicators
 (after! org (setq org-hide-emphasis-markers t))
@@ -41,27 +55,10 @@
           key
           (lambda () (interactive) (find-file file)))))
 
-;; keybindings for commonly used org files
-(zz/add-file-keybinding "C-c z w" "~/.org/Work/work.org.gpg" "work.org")
-(zz/add-file-keybinding "C-c z i" "~/.org/ideas.org" "ideas.org")
-(zz/add-file-keybinding "C-c z p" "~/.org/projects.org" "projects.org")
-(zz/add-file-keybinding "C-c z d" "~/.org/diary.org" "diary.org")
-
 ;; org-roam?
 (setq org-roam-directory org-directory)
 (setq +org-roam-open-buffer-on-find-file nil)
 
-;; Capturing images
-(defun zz/org-download-paste-clipboard (&optional use-default-filename)
-  (interactive "P")
-  (require 'org-download)
-  (let ((file
-         (if (not use-default-filename)
-             (read-string (format "Filename [%s]: "
-                                  org-download-screenshot-basename)
-                          nil nil org-download-screenshot-basename)
-           nil)))
-    (org-download-clipboard file)))
 
 (after! org
   (setq org-download-method 'directory)
@@ -72,3 +69,12 @@
   (map! :map org-mode-map
         "C-c l a y" #'zz/org-download-paste-clipboard
         "C-M-y" #'zz/org-download-paste-clipboard))
+
+(after! org
+  (require 'org-tempo)
+  (set-popup-rule! "^ \\*Org tags" :side 'bottom :size 0.80 :select t :ttl nil)
+
+  (map! :map org-mode-map
+        :n "M-j" #'org-metadown
+        :n "M-k" #'org-metaup)
+  )

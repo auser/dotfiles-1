@@ -150,7 +150,7 @@
        ;;ocaml             ; an objective camel
        (org +pretty
             ;; Umm... add this back later
-            ;; +journal
+            +journal
             +deft
             +hugo
             +pandoc

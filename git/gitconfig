@@ -128,6 +128,7 @@
 	ms = merge --skip
 	#############
 	o = checkout
+	co = checkout
 	om = checkout master
 	ob = checkout -b
 	opr = !sh -c 'git fo pull/$1/head:pr-$1 && git o pr-$1'

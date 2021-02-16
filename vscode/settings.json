@@ -45,9 +45,9 @@
   "files.eol": "\n",
   // Workbench
   "workbench.editor.enablePreviewFromQuickOpen": true,
-  "workbench.colorTheme": "GitHub Light",
-  "workbench.preferredLightColorTheme": "GitHub Light",
-  "workbench.preferredDarkColorTheme": "GitHub Dark",
+  "workbench.colorTheme": "Atom One Dark",
+  "workbench.preferredLightColorTheme": "Atom One Light",
+  "workbench.preferredDarkColorTheme": "Atom One Dark",
   "workbench.list.horizontalScrolling": true,
   "workbench.panel.defaultLocation": "right",
   "workbench.fontAliasing": "antialiased",
@@ -218,6 +218,7 @@
   // TypeScript
   "typescript.check.npmIsInstalled": false,
   "typescript.updateImportsOnFileMove.enabled": "never",
+  "typescript.suggest.autoImports": true,
   // JavaScript
   "javascript.updateImportsOnFileMove.enabled": "never",
   "javascript.validate.enable": false,
@@ -278,5 +279,6 @@
   "workbench.statusBar.visible": false,
   "workbench.editor.decorations.colors": false,
   "workbench.editor.decorations.badges": false,
-  "codestream.email": "me@ari.io"
+  "codestream.email": "me@ari.io",
+  "editor.autoIndent": "full"
 }

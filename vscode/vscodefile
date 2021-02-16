@@ -19,3 +19,5 @@ ms-dotnettools.csharp
 ms-toolsai.jupyter
 dart-code.dart-code
 mattn.lisp
+formulahendry.auto-rename-tag
+formulahendry.auto-close-tag

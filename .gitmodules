@@ -32,3 +32,8 @@
 [submodule "asdf"]
 	path = asdf
 	url = https://github.com/asdf-vm/asdf.git
+[submodule "vendor/dotbot-git"]
+	path = vendor/dotbot-git
+	url = https://github.com/DrDynamic/dotbot-git.git
+[submodule "dotbot"]
+	ignore = dirty

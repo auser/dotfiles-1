@@ -9,9 +9,9 @@
 - clean: ["~"]
 
 # Run shell commands
-# - shell:
+- shell:
     # Install submodules
-#    - [git submodule update --init --recursive, Installing submodules]
+   - [git submodule update --init --recursive, Installing submodules]
 
 - go:
     - github.com/delicb/cliware
@@ -58,6 +58,11 @@
       versions:
         - 1.10.1
 
+- git:
+  '~/.vim/bundle/Vundle.vim':
+    url: 'https://github.com/VundleVim/Vundle.vim.git'
+    description: "Vundle installation"
+
 - vscodefile:
     # vscodefile
     file: vscode/vscodefile
@@ -81,7 +86,7 @@
     ~/.zshrc.d:
       create: true
       path: zsh/
-    ~/.config/karabiner.edn: 
+    ~/.config/karabiner.edn:
       create: true
       path: karabiner/karabiner.edn
     ~/.asdf: asdf
@@ -111,8 +116,11 @@
     ~/.doingrc: config/doing.yml
     # hyper.js
     ~/.hyper.js: config/hyper.js
-    # Neovim
-    ~/.config/nvim: nvim
+    # Vim
+    ~/.vimrc: nvim/vimrc
+    ~/.vimrc.bundles: nvim/vimrc.bundles
+    ~/.vimrc.local: nvim/vimrc.local
+    ~/.vimrc.bundles.local: nvim/vimrc.bundles.local
     # VS Code
     ~/Library/Application Support/Code/User/settings.json: vscode/settings.json
     ~/Library/Application Support/Code/User/keybindings.json: vscode/keybindings.json
@@ -121,6 +129,6 @@
     # Jupyter
     ~/Library/LaunchAgents/jupyter.plist: macos/jupyter.plist
 
-- shell:
-  - [ $(brew --prefix)/opt/fzf/install ]
-  - ["~/.emacs.d/bin/doom install"]
+# - shell:
+#   - [ $(brew --prefix)/opt/fzf/install ]
+#   - ["~/.emacs.d/bin/doom install"]

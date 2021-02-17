@@ -10,19 +10,31 @@ You can also see my top used applications, Safari extensions and Alfred workflow
 
 ##### Contents
 
-- [Install](#install)
-  - [Clean install everything](#clean-install-everything)
-- [Karabiner](#karabiner)
-- [Neovim](#neovim)
-- [VS Code](#vs-code)
-- [Sublime Text](#sublime-text)
-- [Zsh](#zsh)
-  - [Aliases and functions](#aliases-and-functions)
-- [FZF](#fzf)
-- [Interesting dotfiles](#interesting-dotfiles)
-- [Contributing](#contributing)
+- [My configuration files for macOS ![Thanks](https://patreon.com/nikitavoloboev)](#my-configuration-files-for-macos-)
+        - [Contents](#contents)
+  - [Install](#install)
+    - [Install Nix](#install-nix)
+    - [Clean install everything](#clean-install-everything)
+  - [Karabiner](#karabiner)
+  - [Neovim](#neovim)
+  - [VS Code](#vs-code)
+  - [Sublime Text](#sublime-text)
+  - [Zsh](#zsh)
+    - [Aliases and functions](#aliases-and-functions)
+      - [Commit and push repository to GitHub](#commit-and-push-repository-to-github)
+      - [Commit all with generic `update` message](#commit-all-with-generic-update-message)
+      - [Clone current URL in clipboard](#clone-current-url-in-clipboard)
+      - [Trash files / folders](#trash-files--folders)
+  - [FZF](#fzf)
+  - [Interesting dotfiles](#interesting-dotfiles)
+  - [Contributing](#contributing)
+  - [Thank you](#thank-you)
 
 ## Install
+
+```bash
+git submodule update --init --remote
+```
 
 ### Install Nix
 

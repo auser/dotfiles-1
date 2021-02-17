@@ -13,65 +13,6 @@
     # Install submodules
    - [git submodule update --init --recursive, Installing submodules]
 
-- go:
-    - github.com/delicb/cliware
-
-- rust:
-    - stable:
-        - targets:
-            - x86_64-apple-darwin
-            - x86_64-unknown-linux-gnu
-        - components:
-            - rust-analysis
-            - rls
-            - rust-src
-# - cargo:
-    # - cargo-watch
-    # - cargo-release
-    # - racer
-
-# Install asdf
-- asdf:
-    - plugin: python
-      url: https://github.com/tuvistavie/asdf-python.git
-      global: anaconda3-5.3.1
-      versions:
-        - anaconda3-5.3.1
-    - plugin: nodejs
-      url: https://github.com/asdf-vm/asdf-nodejs.git
-      global: 12.15.0
-      versions:
-        - 12.15.0
-    - plugin: ruby
-      url: https://github.com/asdf-vm/asdf-ruby.git
-      global: 2.6.4
-      versions:
-        - 2.6.4
-    - plugin: golang
-      url: https://github.com/kennyp/asdf-golang
-      global: 1.13
-      versions:
-        - 1.13
-    - plugin: elixir
-      url: https://github.com/asdf-vm/asdf-elixir.git
-      global: 1.10.1
-      versions:
-        - 1.10.1
-
-- git:
-  '~/.vim/bundle/Vundle.vim':
-    url: 'https://github.com/VundleVim/Vundle.vim.git'
-    description: "Vundle installation"
-
-- vscodefile:
-    # vscodefile
-    file: vscode/vscodefile
-    insiders: false
-
-- brewfile:
-    # This accepts the same options as `brew bundle` command:
-    file: macos/Brewfile
-
 # Symlink files
 - link:
     # bin
@@ -132,3 +73,64 @@
 # - shell:
 #   - [ $(brew --prefix)/opt/fzf/install ]
 #   - ["~/.emacs.d/bin/doom install"]
+# - go:
+    # - github.com/delicb/cliware
+
+# - rust:
+#     - stable:
+#         - targets:
+#             - x86_64-apple-darwin
+#             - x86_64-unknown-linux-gnu
+#         - components:
+#             - rust-analysis
+#             - rls
+#             - rust-src
+# - cargo:
+    # - cargo-watch
+    # - cargo-release
+    # - racer
+
+# Install asdf
+- asdf:
+      - plugin: python
+        url: https://github.com/tuvistavie/asdf-python.git
+        global: anaconda3-5.3.1
+        versions:
+          - anaconda3-5.3.1
+      - plugin: nodejs
+        url: https://github.com/asdf-vm/asdf-nodejs.git
+        global: 12.15.0
+        versions:
+          - 12.15.0
+      - plugin: ruby
+        url: https://github.com/asdf-vm/asdf-ruby.git
+        global: 2.6.4
+        versions:
+          - 2.6.4
+      - plugin: golang
+        url: https://github.com/kennyp/asdf-golang
+        global: 1.13
+        versions:
+          - 1.13
+      - plugin: elixir
+        url: https://github.com/asdf-vm/asdf-elixir.git
+        global: 1.10.1
+        versions:
+          - 1.10.1
+
+- git:
+    '~/.vim/bundle/Vundle.vim':
+        url: 'https://github.com/VundleVim/Vundle.vim.git'
+        description: "Vundle installation"
+
+- shell:
+    - "vim -c \"PluginInstall!\" -c \"q\" -c \"q\""
+
+- vscodefile:
+    # vscodefile
+    file: vscode/vscodefile
+    insiders: false
+
+- brewfile:
+    # This accepts the same options as `brew bundle` command:
+    file: macos/Brewfile

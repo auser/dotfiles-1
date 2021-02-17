@@ -19,9 +19,16 @@ BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 #     fi
 # fi
 
-if [ ! -f ${BASEDIR}/hammerspoon/Spoons/miro-windows-manager/MiroWindowsManager.spoon ]; then
-    ln -sf ${BASEDIR}/hammerspoon/Spoons/miro-windows-manager/MiroWindowsManager.spoon ${BASEDIR}/hammerspoon/Spoons/MiroWindowsManager.spoon
-fi
+cd "${BASEDIR}"
+git submodule update --init --recursive
+git submodule sync --quiet --recursive
+git submodule update --init --recursive "${DOTBOT_DIR}"
+
+ln -sf ./asdf ~/.asdf
+
+# if [ ! -f ${BASEDIR}/hammerspoon/Spoons/miro-windows-manager/MiroWindowsManager.spoon ]; then
+    # ln -sf ${BASEDIR}/hammerspoon/Spoons/miro-windows-manager/MiroWindowsManager.spoon ${BASEDIR}/hammerspoon/Spoons/MiroWindowsManager.spoon
+# fi
 
 # --plugin-dir ${VENDOR_DIR}/dotbot-rust \
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" \
@@ -31,5 +38,5 @@ fi
     --plugin-dir ${VENDOR_DIR}/dotbot-vscode \
     --plugin-dir ${VENDOR_DIR}/dotbot-brewfile \
     --plugin-dir ${VENDOR_DIR}/dotbot-rust \
-    --plugin-dir ${VENDOR_DIR}/dotbot-git \
+    --plugin ${VENDOR_DIR}/dotbot-git/git.py \
     -c "${CONFIG}" --verbose "${@}"

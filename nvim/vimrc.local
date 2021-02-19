@@ -1,5 +1,12 @@
 set nocursorline " don't highlight current line
 
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
 " keyboard shortcuts
 inoremap jj <ESC>
 
@@ -31,3 +38,21 @@ function! s:RemoveConflictingAlignMaps()
 endfunction
 command! -nargs=0 RemoveConflictingAlignMaps call s:RemoveConflictingAlignMaps()
 silent! autocmd VimEnter * RemoveConflictingAlignMaps
+
+"" Python
+" let $PYTHONHOME=$HOME."/.pyenv/versions/3.6.8"
+" set pythonthreedll=$HOME/.pyenv/versions/3.6.8/lib/libpython3.6m.a
+py3 import sys
+
+autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript
+
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+vmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
+" NERD TREE
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>

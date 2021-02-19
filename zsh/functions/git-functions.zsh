@@ -159,15 +159,15 @@ gc() {
 }
 
 # cd to root of .git project
-g.() {
-  export git_dir="$(git rev-parse --show-toplevel 2> /dev/null)"
-  if [ -z $git_dir ]
-  then
-    cd ..
-  else
-    cd $git_dir
-  fi
-}
+# gr() {
+#   export git_dir="$(git rev-parse --show-toplevel 2> /dev/null)"
+#   if [ -z $git_dir ]
+#   then
+#     cd ..
+#   else
+#     cd $git_dir
+#   fi
+# }
 
 # Create MIT license file for Nikita Voloboev
 mit() {

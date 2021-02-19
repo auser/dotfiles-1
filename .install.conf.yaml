@@ -62,6 +62,7 @@
     ~/.vimrc.bundles: nvim/vimrc.bundles
     ~/.vimrc.local: nvim/vimrc.local
     ~/.vimrc.bundles.local: nvim/vimrc.bundles.local
+    ~/.nvim: nvim
     # VS Code
     ~/Library/Application Support/Code/User/settings.json: vscode/settings.json
     ~/Library/Application Support/Code/User/keybindings.json: vscode/keybindings.json
@@ -70,26 +71,24 @@
     # Jupyter
     ~/Library/LaunchAgents/jupyter.plist: macos/jupyter.plist
 
-# - shell:
-#   - [ $(brew --prefix)/opt/fzf/install ]
-#   - ["~/.emacs.d/bin/doom install"]
-# - go:
-    # - github.com/delicb/cliware
+- shell:
+  - [ $(brew --prefix)/opt/fzf/install ]
+  - ["~/.emacs.d/bin/doom install"]
+- go:
+    - github.com/delicb/cliware
 
-# - rust:
-#     - stable:
-#         - targets:
-#             - x86_64-apple-darwin
-#             - x86_64-unknown-linux-gnu
-#         - components:
-#             - rust-analysis
-#             - rls
-#             - rust-src
-# - cargo:
-    # - cargo-watch
-    # - cargo-release
-    # - racer
-
+- rust:
+    - stable:
+        - targets:
+            - x86_64-apple-darwin
+            - x86_64-unknown-linux-gnu
+        - components:
+            - rust-analysis
+            - rls
+            - rust-src
+- cargo:
+    - cargo-watch
+    - cargo-release
 # Install asdf
 - asdf:
       - plugin: python
@@ -132,5 +131,5 @@
     insiders: false
 
 - brewfile:
-    # This accepts the same options as `brew bundle` command:
-    file: macos/Brewfile
+      # This accepts the same options as `brew bundle` command:
+      file: macos/Brewfile

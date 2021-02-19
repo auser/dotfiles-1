@@ -8,9 +8,6 @@
 	path = vendor/dotbot-vscode
 	url = https://github.com/hujianxin/dotbot-vscode.git
 	ignore = dirty
-[submodule "vendor/dotbot-asdf"]
-	path = vendor/dotbot-asdf
-	url = https://github.com/sobolevn/dotbot-asdf.git
 [submodule "vendor/dotbot-rust"]
 	path = vendor/dotbot-rust
 	url = https://github.com/alexcormier/dotbot-rust
@@ -31,5 +28,9 @@
 [submodule "vendor/dotbot-git"]
 	path = vendor/dotbot-git
 	url = https://github.com/DrDynamic/dotbot-git.git
-[submodule "dotbot"]
-	ignore = dirty
+[submodule "vendor/dotbot-asdf"]
+	path = vendor/dotbot-asdf
+	url = https://github.com/sobolevn/dotbot-asdf.git
+[submodule "vendor/pyenv"]
+	path = vendor/pyenv
+	url = https://github.com/pyenv/pyenv.git

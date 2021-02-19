@@ -11,7 +11,6 @@ emacs/spacemacs/
 node_modules/
 yarn.lock
 asdf
-#vendor
 emacs/spacemacs
 hammerspoon/Spoons/miro-windows-manager
 vendor

@@ -6,6 +6,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+::
 
 " keyboard shortcuts
 inoremap jj <ESC>
@@ -39,20 +40,26 @@ endfunction
 command! -nargs=0 RemoveConflictingAlignMaps call s:RemoveConflictingAlignMaps()
 silent! autocmd VimEnter * RemoveConflictingAlignMaps
 
-"" Python
-" let $PYTHONHOME=$HOME."/.pyenv/versions/3.6.8"
-" set pythonthreedll=$HOME/.pyenv/versions/3.6.8/lib/libpython3.6m.a
-py3 import sys
+"" coc completion
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript
+" Reload
+" Edit vimr configuration file
+nnoremap <Leader>ve :e $MYVIMRC<CR>
+" " Reload vimr configuration file
+nnoremap <Leader>vr :source $MYVIMRC<CR>
 
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
+" Navigation splits
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
-vmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+set splitbelow
+set splitright
 
-" NERD TREE
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
+" Pasting
+:set paste " will enable the paste mode as answered above
+:set nu    " this will show the line numbers for editor
+:set autoindent

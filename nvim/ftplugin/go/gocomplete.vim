@@ -1,1 +1,1 @@
-/Users/nikivi/.config/nvim/plugged/gocode/nvim/ftplugin/go/gocomplete.vim
+/Users/alerner/Development/personal/dotfiles/ftplugin/go/gocomplete.vim

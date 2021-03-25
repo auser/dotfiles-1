@@ -150,7 +150,7 @@
        ;;ocaml             ; an objective camel
        (org +pretty
             ;; Umm... add this back later
-            +journal
+            ;; +journal
             +deft
             +hugo
             +pandoc
@@ -178,6 +178,7 @@
        ;;solidity          ; do you need a blockchain? No.
        ;;swift             ; who asked for emoji variables?
        ;;terra             ; Earth and Moon in alignment for performance.
+       (typescript +lsp)
        web               ; the tubes
        yaml              ; JSON, but readable
 

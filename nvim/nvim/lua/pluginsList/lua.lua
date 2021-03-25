@@ -1,0 +1,1 @@
+/Users/alerner/Development/personal/dotfiles/nvim/lua/pluginsList/lua.lua

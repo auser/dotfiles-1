@@ -1,0 +1,1 @@
+/Users/alerner/Development/personal/dotfiles/nvim/ftplugin/go/gocomplete.vim

@@ -5,6 +5,7 @@
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
+  "editor.saveOnFocus": true,
   "editor.renderLineHighlight": "gutter",
   "editor.hideCursorInOverviewRuler": true,
   "editor.scrollBeyondLastLine": true,
@@ -46,7 +47,7 @@
   // Workbench
   "workbench.editor.enablePreviewFromQuickOpen": true,
   "workbench.colorTheme": "Atom One Dark",
-  "workbench.preferredLightColorTheme": "Atom One Light",
+  "workbench.preferredLightColorTheme": "Atom One Dark",
   "workbench.preferredDarkColorTheme": "Atom One Dark",
   "workbench.list.horizontalScrolling": true,
   "workbench.panel.defaultLocation": "right",
@@ -230,6 +231,10 @@
   "git.ignoreLimitWarning": true,
   "git.enableSmartCommit": true,
   "git.ignoreMissingGitWarning": true,
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html"
+  },
+  "tailwindCSS.emmetCompletions": true,
   // GitLens
   // "gitlens.keymap": "chorded",
   // "gitlens.codeLens.scopes": ["containers", "document"],
@@ -280,5 +285,6 @@
   "workbench.editor.decorations.colors": false,
   "workbench.editor.decorations.badges": false,
   "codestream.email": "me@ari.io",
-  "editor.autoIndent": "full"
+  "editor.autoIndent": "full",
+  "window.zoomLevel": -1
 }

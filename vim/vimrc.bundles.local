@@ -1,0 +1,80 @@
+" Plugin 'garbas/vim-snipmate'
+" Track the engine.
+"{{ Configuring UltiSnips
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+  let g:UltiSnipsExpandTrigger = "<tab>"
+  let g:UltiSnipsJumpForwardTrigger = "<tab>"
+  let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+"}}
+" Snippets are separated from the engine. Add this if you want them:
+
+"{{ You complete me
+Plugin 'ycm-core/YouCompleteMe'
+"}}
+
+Plugin 'sbdchd/neoformat'
+Plugin 'Shougo/neoinclude.vim'
+Plugin 'jsfaint/coc-neoinclude'
+Plugin 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+
+Plugin 'wookayin/vim-autoimport'
+
+Plugin 'peitalin/vim-jsx-typescript'
+Plugin 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plugin 'jparise/vim-graphql'
+Plugin 'joegesualdo/jsdoc.vim'
+
+Plugin 'yuezk/vim-js'
+Plugin 'maxmellon/vim-jsx-pretty'
+Plugin 'HerringtonDarkholme/yats.vim'
+"{{ Autopairs
+" ---> closing XML tags <---
+Plugin 'alvan/vim-closetag'
+" ---> files on which to activate tags auto-closing <---
+  let g:closetag_filenames = '*.html,*.xhtml,*.xml,*.vue,*.phtml,*.js,*.jsx,*.coffee,*.erb'
+  " ---> closing braces and brackets <---
+  Plugin 'jiangmiao/auto-pairs'
+  "}}
+" Plugin 'codota/tabnine-vim'
+"
+" Themes
+
+ " themes
+Plugin 'w0rp/ale'
+Plugin 'sjl/badwolf'
+Plugin 'jacoborus/tender'
+Plugin 'whatyouhide/vim-gotham'
+
+"{{ Color-scheme
+Plugin 'morhetz/gruvbox'
+  set background=dark
+  let g:gruvbox_contrast_dark='default'
+"}}
+
+"{{ rigel color scheme
+Plugin 'Rigellute/rigel'
+"}}
+Plugin 'junegunn/vim-plug'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'mxw/vim-jsx'
+Plugin 'heavenshell/vim-jsdoc'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'itchyny/lightline.vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plugin 'sheerun/vim-polyglot'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'raimondi/delimitmate'
+Plugin 'ap/vim-css-color'
+Plugin 'prettier/vim-prettier', { 'do': 'npm install' }
+Plugin 'palantir/tslint'
+Plugin 'quramy/tsuquyomi'
+Plugin 'frazrepo/vim-rainbow'
+
+" Themes
+Plugin 'nlknguyen/papercolor-theme'
+Plugin 'joshdick/onedark.vim'
+Plugin 'dracula/vim', { 'as': 'dracula' }
+

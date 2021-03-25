@@ -6,7 +6,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 BASEDIR=$HOME/.dotfiles
-BASEDIR=$HOME/Development/personal/dotfiles
 
 if [ -f ${BASEDIR}/before.zsh ]; then
     source ${BASEDIR}/before.zsh

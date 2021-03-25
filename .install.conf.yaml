@@ -12,6 +12,8 @@
 - shell:
     # Install submodules
    - [git submodule update --init --recursive, Installing submodules]
+   # Install neovim
+   - [./nvim/install.sh, Installing neovim things]
 
 # Symlink files
 - link:
@@ -58,11 +60,11 @@
     # hyper.js
     ~/.hyper.js: config/hyper.js
     # Vim
-    ~/.vimrc: nvim/vimrc
-    ~/.vimrc.bundles: nvim/vimrc.bundles
-    ~/.vimrc.local: nvim/vimrc.local
-    ~/.vimrc.bundles.local: nvim/vimrc.bundles.local
-    ~/.nvim: nvim
+    ~/.vimrc: vim/vimrc
+    ~/.vimrc.bundles: vim/vimrc.bundles
+    ~/.vimrc.local: vim/vimrc.local
+    ~/.vimrc.bundles.local: vim/vimrc.bundles.local
+    ~/.config/nvim: nvim
     # VS Code
     ~/Library/Application Support/Code/User/settings.json: vscode/settings.json
     ~/Library/Application Support/Code/User/keybindings.json: vscode/keybindings.json
@@ -73,7 +75,7 @@
 
 - shell:
   - [ $(brew --prefix)/opt/fzf/install ]
-  - ["~/.emacs.d/bin/doom install"]
+  # - ["~/.emacs.d/bin/doom install"]
 - go:
     - github.com/delicb/cliware
 

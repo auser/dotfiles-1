@@ -28,6 +28,16 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
 (setq user-full-name "Ari Lerner"
       user-mail-address "me@ari.io")
 
+
+;; Setup exec-path
+;;; add to ~/.doom.d/config.el
+(require 'exec-path-from-shell)
+(when (display-graphic-p)
+  (exec-path-from-shell-initialize))
+
+(setenv "PATH" (concat (getenv "PATH") ":/usr/bin"))
+(setq exec-path (append exec-path '("/usr/bin")))
+
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
 ;;
@@ -86,7 +96,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
 ;; (map! "C-x b"   #'counsel-buffer-or-recentf
 ;;       "C-x C-b" #'counsel-switch-buffer)
 
+
 (load! "+ui")
 (load! "+org")
 (load! "+web")
-(load! "+rust")

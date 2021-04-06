@@ -1,1 +1,0 @@
-/Users/alerner/Development/personal/dotfiles/hammerspoon/Spoons/miro-windows-manager/MiroWindowsManager.spoon/init.lua

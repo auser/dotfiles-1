@@ -214,6 +214,7 @@ alias ew='nvim ~/.dotfiles/nvim/init.vim' # nvimrc
 alias essh='nvim ~/.ssh/config' # ssh config
 alias ek='nvim ~/.dotfiles/karabiner/karabiner.edn'
 alias ez='nvim ~/.zshrc'
+alias vim=/usr/local/bin/vim
 
 # cd places
 alias doc='cd ~/Documents/'

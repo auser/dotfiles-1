@@ -1,1 +1,0 @@
-/Users/alerner/Development/personal/dotfiles/nvim/nvim/nvim/nvim/lua/telescope-nvim/lua.lua

@@ -15,7 +15,7 @@
   "editor.occurrencesHighlight": false,
   "editor.overviewRulerBorder": false,
   "editor.renderIndentGuides": true,
-  "editor.folding": false,
+  "editor.folding": true,
   "editor.snippetSuggestions": "top",
   "editor.lightbulb.enabled": false,
   "editor.minimap.enabled": false,
@@ -286,5 +286,6 @@
   "workbench.editor.decorations.badges": false,
   "codestream.email": "me@ari.io",
   "editor.autoIndent": "full",
-  "window.zoomLevel": -1
+  "window.zoomLevel": -1,
+  "diffEditor.renderSideBySide": false
 }

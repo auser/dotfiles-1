@@ -1,1 +1,1 @@
-/Users/alerner/Development/personal/dotfiles/ftplugin/go/gocomplete.vim
+/Users/alerner/Development/personal/dotfiles/nvim/ftplugin/go/gocomplete.vim

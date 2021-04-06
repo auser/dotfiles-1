@@ -13,7 +13,7 @@
     # Install submodules
    - [git submodule update --init --recursive, Installing submodules]
    # Install neovim
-   - [./nvim/install.sh, Installing neovim things]
+  #  - [./nvim/install.sh, Installing neovim things]
 
 # Symlink files
 - link:
@@ -64,11 +64,12 @@
     ~/.vimrc.bundles: vim/vimrc.bundles
     ~/.vimrc.local: vim/vimrc.local
     ~/.vimrc.bundles.local: vim/vimrc.bundles.local
-    ~/.config/nvim: nvim
+    ~/.config/nvim: nvim/
     # VS Code
     ~/Library/Application Support/Code/User/settings.json: vscode/settings.json
     ~/Library/Application Support/Code/User/keybindings.json: vscode/keybindings.json
     # IDEA
+
     ~/.ideavimrc: idea/ideavimrc
     # Jupyter
     ~/Library/LaunchAgents/jupyter.plist: macos/jupyter.plist

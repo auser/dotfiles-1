@@ -1,1 +1,0 @@
-/Users/alerner/Development/personal/dotfiles/nvim/lua/web-devicons/lua.lua

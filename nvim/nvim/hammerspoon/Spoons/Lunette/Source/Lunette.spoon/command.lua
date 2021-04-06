@@ -1,1 +1,0 @@
-/Users/alerner/Development/personal/dotfiles/nvim/hammerspoon/Spoons/Lunette/Source/Lunette.spoon/command.lua

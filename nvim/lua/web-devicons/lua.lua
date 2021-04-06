@@ -1,1 +1,0 @@
-/Users/alerner/Development/personal/dotfiles/lua/web-devicons/lua.lua

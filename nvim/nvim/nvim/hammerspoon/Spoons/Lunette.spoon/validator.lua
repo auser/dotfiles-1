@@ -1,1 +1,0 @@
-/Users/alerner/Development/personal/dotfiles/nvim/nvim/hammerspoon/Spoons/Lunette.spoon/validator.lua

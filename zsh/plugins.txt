@@ -4,7 +4,7 @@ mafredri/zsh-async
 rupa/z
 Tarrasch/zsh-bd
 zsh-users/zsh-completions
-marzocchi/zsh-notify
+# marzocchi/zsh-notify
 zsh-users/zsh-autosuggestions
 junegunn/fzf
 
@@ -16,11 +16,10 @@ zdharma/fast-syntax-highlighting
 
 # THEMES
 # bhilburn/powerlevel9k
-# sindresorhus/pure
+sindresorhus/pure
 denysdovhan/spaceship-prompt
 romkatv/powerlevel10k
 
 robbyrussell/oh-my-zsh path:plugins/aws/aws.plugin.zsh
 robbyrussell/oh-my-zsh path:plugins/asdf
 xorkevin/code-review-zsh
-marzocchi/zsh-notify

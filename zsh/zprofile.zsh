@@ -2,4 +2,3 @@
 eval `fnm env`
 export NIX_IGNORE_SYMLINK_STORE=1
 
-export PATH="$HOME/.cargo/bin:$PATH"

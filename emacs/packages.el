@@ -68,6 +68,15 @@
 
 ;; Code nav
 (package! lsp-ui)
+(package! key-chord)
+(package! ace-jump-mode)
+(package! multi-term)
+
+;;(package! org-bullets)                  ;
+
+;; org roam
+(package! company-org-roam
+   :recipe (:host github :repo "jethrokuan/company-org-roam"))
 
 ;; Code nav
 ;; (package! org-journal)

@@ -32,10 +32,6 @@ local function try_loadstring(s, component, name)
 end
 
 _G.packer_plugins = {
-  ["base16-vim"] = {
-    loaded = true,
-    path = "/Users/alerner/.local/share/nvim/site/pack/packer/start/base16-vim"
-  },
   ["galaxyline.nvim"] = {
     loaded = true,
     path = "/Users/alerner/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
@@ -44,9 +40,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/alerner/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
   },
-  indentLine = {
+  ["indent-blankline.nvim"] = {
     loaded = true,
-    path = "/Users/alerner/.local/share/nvim/site/pack/packer/start/indentLine"
+    path = "/Users/alerner/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
   },
   ["lspkind-nvim"] = {
     loaded = true,
@@ -56,9 +52,17 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/alerner/.local/share/nvim/site/pack/packer/start/neoformat"
   },
+  ["neoscroll.nvim"] = {
+    loaded = true,
+    path = "/Users/alerner/.local/share/nvim/site/pack/packer/start/neoscroll.nvim"
+  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/Users/alerner/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
+  },
+  ["nvim-base16.lua"] = {
+    loaded = true,
+    path = "/Users/alerner/.local/share/nvim/site/pack/packer/start/nvim-base16.lua"
   },
   ["nvim-bufferline.lua"] = {
     loaded = true,

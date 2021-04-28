@@ -100,3 +100,4 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
 (load! "+ui")
 (load! "+org")
 (load! "+web")
+(load! "+writing")

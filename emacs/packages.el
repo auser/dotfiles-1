@@ -72,6 +72,9 @@
 (package! ace-jump-mode)
 (package! multi-term)
 
+;; Pythhon
+(package! elpy)
+(package! pyenv-mode)
 ;;(package! org-bullets)                  ;
 
 ;; org roam

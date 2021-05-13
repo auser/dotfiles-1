@@ -39,6 +39,7 @@
     ~/.p10k.zsh: zsh/p10k.zsh
     ~/.tmux.conf: tmux/tmux.conf
     ~/.tmux.conf.local: tmux/tmux.conf.local
+    ~/.yabairc: yabai/yabairc
     ~/.fonts:
       create: true
       path: local/fonts/

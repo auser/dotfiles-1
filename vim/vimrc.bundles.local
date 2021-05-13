@@ -16,7 +16,7 @@ Plugin 'ycm-core/YouCompleteMe'
 Plugin 'sbdchd/neoformat'
 Plugin 'Shougo/neoinclude.vim'
 Plugin 'jsfaint/coc-neoinclude'
-Plugin 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+"Plugin 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 
 Plugin 'wookayin/vim-autoimport'
 

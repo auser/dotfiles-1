@@ -101,3 +101,4 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
 (load! "+org")
 (load! "+web")
 (load! "+writing")
+(load! "+python")

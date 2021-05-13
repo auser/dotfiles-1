@@ -3,8 +3,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   '("76bfa9318742342233d8b0b42e824130b3a50dcc732866ff8e47366aed69de11" "54cf3f8314ce89c4d7e20ae52f7ff0739efb458f4326a2ca075bf34bc0b4f499" "3c2f28c6ba2ad7373ea4c43f28fcf2eed14818ec9f0659b1c97d4e89c99e091e" default))
  '(org-agenda-files
-   '("~/Development/amazon/internal/sports-stl.org" "/Users/alerner/Dropbox/Personal/.org/2021-04-28.org"))
+   '("~/Development/amazon/internal/sports-stl.org" "/Users/alerner/Dropbox/Personal/.org/2021-05-03.org"))
  '(package-selected-packages '(tide company jupyter org-roam)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -35,3 +37,4 @@
  '(org-verbatim ((t (:inherit (shadow fixed-pitch)))))
  '(variable-pitch ((t (:family "Fira Code" :height 180 :weight thin)))))
 
+(put 'customize-group 'disabled nil)

@@ -40,6 +40,7 @@
     ~/.tmux.conf: tmux/tmux.conf
     ~/.tmux.conf.local: tmux/tmux.conf.local
     ~/.yabairc: yabai/yabairc
+    ~/.skhdrc: yabai/skhdrc
     ~/.fonts:
       create: true
       path: local/fonts/

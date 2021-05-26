@@ -102,3 +102,5 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
 (load! "+web")
 (load! "+writing")
 (load! "+python")
+
+(load! "+last")

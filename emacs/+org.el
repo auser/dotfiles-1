@@ -136,12 +136,12 @@
         :desc "org-roam-insert" "i" #'org-roam-insert
         :desc "org-roam-capture" "c" #'org-roam-capture))
 
-(require 'company-org-roam)
-(use-package company-org-roam
-:when (featurep! :completion company)
-:after org-roam
-:config
-(set-company-backend! 'org-mode '(company-org-roam company-yasnippet company-dabbrev)))
+;(require 'company-org-roam)
+;(use-package company-org-roam
+;:when (featurep! :completion company)
+;:after org-roam
+;:config
+;(set-company-backend! 'org-mode '(company-org-roam company-yasnippet company-dabbrev)))
 
 (use-package org-journal
 :bind

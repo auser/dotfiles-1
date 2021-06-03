@@ -16,7 +16,7 @@ zdharma/fast-syntax-highlighting
 
 # THEMES
 # bhilburn/powerlevel9k
-sindresorhus/pure
+# sindresorhus/pure
 denysdovhan/spaceship-prompt
 romkatv/powerlevel10k
 

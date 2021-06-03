@@ -103,7 +103,7 @@
           - anaconda3-5.3.1
       - plugin: nodejs
         url: https://github.com/asdf-vm/asdf-nodejs.git
-        global: 12.15.0
+        global: 14.5.0
         versions:
           - 12.15.0
       - plugin: ruby
